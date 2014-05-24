@@ -1,0 +1,8 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.jboss.jandex
+Bundle-Name: net.echinopsii.3rdparty.org.jboss.jandex
+Bundle-Vendor: JBoss (source) / echinopsii (bundle)
+Bundle-Version: 1.1.0
+Import-Package:
+ org.apache.tools.ant;version="[1.8,2)",
+ org.apache.tools.ant.types;version="[1.8,2)" 

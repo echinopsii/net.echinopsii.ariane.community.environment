@@ -1,0 +1,16 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.hibernate.hibernate-osgi
+Bundle-Name: net.echinopsii.3rdparty.org.hibernate.hibernate-osgi
+Bundle-Vendor: Hibernate.org (original source) / echinopsii (patched sourc and bundle)
+Bundle-Description: Hibernate ORM OSGI
+Bundle-Version: 4.3.0.Final
+Import-Template:
+ javassist.bytecode;version="[3.18,4)",
+ javassist.bytecode.annotation;version="[3.18,4)",
+ javax.persistence;version="2.1.0",
+ javax.persistence.spi;version="2.1.0",
+ javax.transaction;version="[1.1,2)",
+ org.hibernate*;version="[4.3,5)",
+ org.jboss.logging;version="[3.1,4)",
+ org.osgi.framework;version="[1.6,2)",
+ org.osgi.framework.wiring;version="[1.0,2)"

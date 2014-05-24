@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-base
+Bundle-Name: net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-base
+Bundle-Vendor: net.fortytwo (source) / echinopsii (bundle)
+Bundle-Version: 1.0

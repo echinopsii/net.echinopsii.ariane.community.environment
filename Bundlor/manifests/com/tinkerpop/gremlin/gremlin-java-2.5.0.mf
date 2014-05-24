@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Description: Gremlin is a domain specific language for traversing
+  property graphs.        Gremlin makes use of a path-based syntax to su
+ pport complex graph traversals.        Gremlin has application in the a
+ reas of graph query, analysis, and manipulation.
+Bundle-License: http://www.opensource.org/licenses/BSD-3-Clause
+Bundle-ManifestVersion: 2
+Bundle-Name: net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-java
+Bundle-SymbolicName: net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-java
+Bundle-Version: 2.5.0
+Bundle-Vendor: Tinkerpop (source) / echinopsii (bundle).  
+DynamicImport-Package: *
+Import-Template:
+  com.tinkerpop.blueprints*;version="[2.5.0,2.6.0)",
+  com.tinkerpop.pipes*;version="[2.5.0,2.6.0)"

@@ -1,0 +1,10 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.jboss.marshalling-river
+Bundle-Name: net.echinopsii.3rdparty.jboss-marshalling-river
+Bundle-Vendor: JBoss (source) / echinopsii (bundle)
+Bundle-Version: 1.3.18
+Excluded-Imports:
+  org.jboss.marshalling,
+  org.jboss.marshalling.reflect,
+  org.jboss.marshalling.util
+Fragment-Host: net.echinopsii.3rdparty.org.jboss.marshalling

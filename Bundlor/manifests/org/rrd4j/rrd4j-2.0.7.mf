@@ -1,0 +1,8 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.rrd4j.rrd4j
+Bundle-Name: net.echinopsii.3rdparty.org.rrd4j.rrd4j
+Bundle-Vendor: org.rrd4j (source) / echinopsii (bundle)
+Bundle-Version: 2.0.7
+Import-Package:
+ com.mongodb;resolution:=optional,
+ com.sleepycat.je;resolution:=optional 

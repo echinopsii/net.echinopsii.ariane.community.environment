@@ -1,0 +1,11 @@
+<plan name="net.echinopsii.ariane.core.portal" version="0.5.0.SNAPSHOT" scoped="false" atomic="false"
+                xmlns="http://www.eclipse.org/virgo/schema/plan"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="
+				        http://www.eclipse.org/virgo/schema/plan 
+				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+        <artifact uri="file:/home/mffrench/.m2/repository/net/echinopsii/ariane/core/portal/net.echinopsii.ariane.core.portal.base/0.5.0-SNAPSHOT/net.echinopsii.ariane.core.portal.base-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:/home/mffrench/.m2/repository/net/echinopsii/ariane/core/portal/net.echinopsii.ariane.core.portal.wat/0.5.0-SNAPSHOT/net.echinopsii.ariane.core.portal.wat-0.5.0-SNAPSHOT.jar"/>
+	<artifact uri="file:/home/mffrench/.m2/repository/net/echinopsii/ariane/core/portal/net.echinopsii.ariane.core.portal.idmwat/0.5.0-SNAPSHOT/net.echinopsii.ariane.core.portal.idmwat-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:/home/mffrench/.m2/repository/net/echinopsii/ariane/core/portal/net.echinopsii.ariane.core.portal.wab/0.5.0-SNAPSHOT/net.echinopsii.ariane.core.portal.wab-0.5.0-SNAPSHOT.war"/>
+</plan>

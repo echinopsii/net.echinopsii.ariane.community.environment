@@ -1,0 +1,13 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.com.h2database.h2
+Bundle-Name: net.echinopsii.3rdparty.com.h2database.h2
+Bundle-Vendor: H2 Group (source) / echinopsii (bundle)
+Bundle-Activator: org.h2.util.DbDriverActivator
+DynamicImport-Package: *  
+Bundle-Version: 1.3.170
+Manifest-Version: 1.0
+Implementation-Title: H2 Database Engine
+Implementation-URL: http://www.h2database.com
+Implementation-Version: 1.3.170
+Main-Class: org.h2.tools.Console
+Premain-Class: org.h2.util.Profiler  

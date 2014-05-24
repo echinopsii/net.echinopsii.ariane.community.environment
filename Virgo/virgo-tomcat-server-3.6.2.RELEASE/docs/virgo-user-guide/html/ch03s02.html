@@ -1,0 +1,54 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.2&nbsp;Installing with the p2 director from Eclipse</title><link rel="stylesheet" href="css/stylesheet.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><link rel="home" href="index.html" title="Virgo User Guide"><link rel="up" href="ch03.html" title="3.&nbsp;Using the p2 director"><link rel="prev" href="ch03.html" title="3.&nbsp;Using the p2 director"><link rel="next" href="ch04.html" title="4.&nbsp;Installing Virgo Server for Apache Tomcat"><!--Begin Google Analytics code--><script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-2728886-3");
+			pageTracker._setDomainName("none");
+			pageTracker._setAllowLinker(true);
+			pageTracker._trackPageview();
+		</script><!--End Google Analytics code--></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2&nbsp;Installing with the p2 director from Eclipse</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><th width="60%" align="center">3.&nbsp;Using the p2 director</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="using-director"></a>3.2&nbsp;Installing with the p2 director from Eclipse</h2></div></div></div><p>
+				This section covers briefly using the p2 director for installing.
+				A helpful page is the p2 director's <a class="ulink" href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/p2_director.html" target="_top">documentation at help.eclipse.org</a>. 
+				There you can find more information on the different supported arguments.
+			</p><p>
+				Here's how to use the GUI version of the director built-in Eclipse.
+			</p><p>
+				1. Go to the <span class="emphasis"><em>Run</em></span> context menu and select <span class="emphasis"><em>Run Configurations</em></span>
+			</p><p>
+				2. Create a new one and choose the director application as shown below, then switch to the <span class="emphasis"><em>Arguments</em></span> tab
+			</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/important.gif"></td><th align="left">Important</th></tr><tr><td align="left" valign="top">In the image below the "Location:" text box's value is managed by your IDE, don't type anything in there.</td></tr></table></div><p>	 
+				<img src="images/run_configuration.png">
+			</p><p>
+				In the <span class="emphasis"><em>Program Arguments</em></span> section append the director arguments. Here's an example I used:
+				</p><pre class="screen">-repository http://download.eclipse.org/virgo/updatesite/3.6.2.RELEASE
+-installIU nano.product
+-tag InitialState
+-destination <span class="bold"><strong>/Users/&lt;youruser&gt;/install/virgo</strong></span>
+-profile VirgoProfile
+-roaming
+-p2.os ${target.os}
+-p2.ws ${target.ws}
+-p2.arch ${target.arch}
+				</pre><p>
+				</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/important.gif"></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>The <span class="emphasis"><em>-repository</em></span> argument accepts any valid p2 repository.</p><p>The <span class="emphasis"><em>-destination</em></span> argument accepts any valid absolute location. It defines the location where your Virgo installation will be provisioned. 
+					If the directory does not exist, it will be created by the director.</p></td></tr></table></div><p>
+				These arguments produce a Virgo Nano installation. For the <span class="emphasis"><em>p2.*</em></span> arguments use the same properties from the example above. Eclipse will substitute them later with real values. 
+			</p><p>
+				The passed value for <span class="emphasis"><em>-installIU</em></span> determines which Virgo product is going to be installed. Here's a list of all Virgo product install IUs:
+				</p><p><span class="emphasis"><em>nano.product</em></span> - Virgo Nano</p><p>
+				</p><p><span class="emphasis"><em>nano-full.product</em></span> - Virgo Nano Full (VN + p2 + GW)</p><p>
+				</p><p><span class="emphasis"><em>kernel.product</em></span> - Virgo Kernel</p><p>
+				</p><p><span class="emphasis"><em>tomcat-server.product</em></span> - Virgo Server for Apache Tomcat</p><p>
+				</p><p><span class="emphasis"><em>jetty-server.product</em></span> - Virgo Jetty Server</p><p>
+			</p><p>	 
+				<img src="images/director_args.png">
+			</p><p>
+				3. Finally, run the created configuration. You should see the following output in Eclipse's Console
+			</p><p>	 
+				<img src="images/director_result.png">
+			</p></div><!--Begin LoopFuse code--><script src="http://loopfuse.net/webrecorder/js/listen.js" type="text/javascript"></script><script type="text/javascript">
+			_lf_cid = "LF_48be82fa";
+			_lf_remora();
+		</script><!--End LoopFuse code--><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch03.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.&nbsp;Using the p2 director&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;4.&nbsp;Installing Virgo Server for Apache Tomcat</td></tr></table></div></body></html>

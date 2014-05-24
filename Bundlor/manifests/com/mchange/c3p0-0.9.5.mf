@@ -1,0 +1,9 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.com.mchange.c3p0
+Bundle-Name: net.echinopsii.3rdparty.com.mchange.c3p0
+Bundle-Vendor: com.mchange (source) / echinopsii (bundle)
+Bundle-Version: 0.9.5
+DynamicImport-Package:
+ *  
+Import-Template:
+ com.mchange*;version="0.2.6.3"  

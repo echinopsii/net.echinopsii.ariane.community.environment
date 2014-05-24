@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.javax.validation.validation-api
+Bundle-Name: net.echinopsii.3rdparty.javax.validation.validation-api
+Bundle-Vendor: Oracle (source) / echinopsii (bundle)
+Bundle-Version: 1.0.0

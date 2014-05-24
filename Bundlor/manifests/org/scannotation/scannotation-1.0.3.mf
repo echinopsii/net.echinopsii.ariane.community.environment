@@ -1,0 +1,10 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.scannotation.scannotation
+Bundle-Name: net.echinopsii.3rdparty.org.scannotation.scannotation
+Bundle-Vendor: org.scannotation (source) / echinopsii (bundle)
+Bundle-Version: 1.0.3
+Fragment-Host: org.apache.catalina;bundle-version="[7.0.35, 7.0.36)"  
+Import-Package:
+ javassist.bytecode;version="[3.15.0,4)",
+ javassist.bytecode.annotation;version="[3.15.0,4)",
+ javax.servlet;version="[2.4,4)"

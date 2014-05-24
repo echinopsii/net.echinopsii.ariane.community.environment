@@ -1,0 +1,62 @@
+<plan name="org.neo4j" version="1.9.5" scoped="false" atomic="false"
+                xmlns="http://www.eclipse.org/virgo/schema/plan"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="
+				        http://www.eclipse.org/virgo/schema/plan 
+				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+
+		<artifact type="bundle" name="com.googlecode.concurrentlinkedhashmap.lru" version="1.3.1"/>
+		<artifact type="bundle" name="javax.jms" version="[1.1, 2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.org.apache.ant" version="[1.8,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.org.apache.ant-launcher" version="[1.8,2)"/>
+		<artifact type="bundle" name="org.apache.commons.beanutils" version="[1.8,2)"/>
+		<artifact type="bundle" name="org.apache.commons.codec" version="[1.5,2)"/>
+		<artifact type="bundle" name="org.apache.commons.configuration" version="[1.6,2)"/>
+		<artifact type="bundle" name="org.apache.commons.digester" version="[1.8,2)"/>
+		<artifact type="bundle" name="org.apache.commons.jxpath" version="[1.3,2)"/>
+		<artifact type="bundle" name="org.apache.commons.lang" version="[2.4,3)"/>
+		<artifact type="bundle" name="org.apache.servicemix.bundles.jline" version="[0.9,1)"/>
+		<artifact type="bundle" name="org.jvnet.mimepull" version="[1.6,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.org.mozilla.rhino" version="[1.7,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.org.rrd4j.rrd4j" version="[2,3)"/>
+		<artifact type="bundle" name="org.scala-lang.scala-library" version="[2.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-util" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-nativerdf" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-memory" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-inferencer" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-api" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-rio-api" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-repository-sparql" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-repository-api" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryresultio-sparqlxml" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryresultio-api" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryparser-sparql" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryparser-api" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-model" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-evaluation" version="[2.6.10,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-query" version="[2.6.10,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.org.openrdf.sesame.sesame-model" version="[2.6.10,3)"/>                
+		<artifact type="bundle" name="org.fusesource.jansi" version="[1.5.0,2)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.antlr" version="[2.7.7,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.sesametools.repository-sail" version="[1.7,2)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.sesametools.common" version="[1.7,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow-rdf" version="[1.0,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow" version="[1.0,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-base" version="[1.0,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.net.fortytwo.linked-data-sail" version="[1.0,2)"/>
+		<artifact type="bundle" name="groovy" version="[1.8.9,2)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.concurrent" version="[1.3.4,2)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.colt" version="[1.2, 2)"/>
+                <artifact type="bundle" name="com.fasterxml.jackson.core.jackson-annotations" version="[2.1.2,3)"/>
+                <artifact type="bundle" name="com.fasterxml.jackson.core.jackson-core" version="[2.1.2,3)"/>
+                <artifact type="bundle" name="com.fasterxml.jackson.core.jackson-databind" version="[2.1.2,3)"/>
+                <artifact type="bundle" name="com.springsource.org.apache.commons.httpclient" version="[3.1,4)"/>
+                <artifact type="bundle" name="com.springsource.org.objectweb.asm" version="[3.1,4)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-core" version="[2.4.0,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-neo4j-graph" version="[2.4.0,3)"/>
+	        <artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.pipes" version="[2.4.0,3)"/>
+		<artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-java" version="[2.4.0,4)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-sail-graph" version="[2.4.0,3)"/>
+                <artifact type="bundle" name="net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-groovy" version="[2.4.0,3)"/>
+		<artifact type="bundle" name="org.apache.servicemix.bundles.neo4j" version="1.9.5"/>
+</plan>

@@ -1,0 +1,19 @@
+<plan name="org.hibernate" version="4.3.0" scoped="false" atomic="false"
+                xmlns="http://www.eclipse.org/virgo/schema/plan"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="
+				        http://www.eclipse.org/virgo/schema/plan 
+				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+
+	<artifact type="bundle" name="net.echinopsii.3rdparty.com.h2database.h2" version="[1.3,1.4)"/>
+        <artifact type="bundle" name="com.mysql.jdbc" version="5.1.29"/>
+        <artifact type="bundle" name="org.mariadb.jdbc" version="1.1.5.0"/>
+	<artifact type="bundle" name="net.echinopsii.3rdparty.com.h2database.webconsole" version="[1.3,1.4)"/>
+	<artifact type="bundle" name="org.hibernate.javax.persistence.hibernate-jpa-2.1-api" version="[1,2)"/>
+        <artifact type="bundle" name="org.hibernate.common.hibernate-commons-annotations" version="[4.0.4, 5)"/>
+        <artifact type="bundle" name="net.echinopsii.3rdparty.org.hibernate.hibernate-core" version="[4.3.0, 5)"/>
+        <artifact type="bundle" name="net.echinopsii.3rdparty.org.hibernate.hibernate-entitymanager" version="[4.3.0, 5)"/>
+	<artifact type="bundle" name="org.hibernate.c3p0" version="[4.3.0, 5)"/>
+	<artifact type="bundle" name="net.echinopsii.3rdparty.org.hibernate.hibernate-infinispan" version="[4.3.0, 5)"/>
+        <artifact type="bundle" name="net.echinopsii.3rdparty.org.hibernate.hibernate-osgi" version="[4.3.0, 5)"/>
+</plan>

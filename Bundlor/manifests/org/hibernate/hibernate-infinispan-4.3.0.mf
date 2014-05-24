@@ -1,0 +1,12 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.hibernate.hibernate-infinispan
+Bundle-Name: net.echinopsii.3rdparty.org.hibernate.hibernate-infinispan
+Bundle-Vendor: Hibernate.org (original source) / echinopsii (source patch and bundle)
+Bundle-Description: A module of the Hibernate O/RM project
+Bundle-Version: 4.3.0.Final
+DynamicImport-Package: *  
+Import-Template:
+ javax.transaction;version="[1.1,2)",
+ javax.naming, 
+ org.hibernate*;version="[4.3,5)",
+ org.infinispan*;version="[6.0,7)" 

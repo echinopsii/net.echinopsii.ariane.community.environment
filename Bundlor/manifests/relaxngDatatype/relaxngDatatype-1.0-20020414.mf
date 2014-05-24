@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.relaxngDatatype.relaxngDatatype
+Bundle-Name: net.echinopsii.3rdparty.relaxngDatatype.relaxngDatatype
+Bundle-Vendor: relaxngDatatype (source) / echinopsii (bundle)
+Bundle-Version: 1.0.0.20020414

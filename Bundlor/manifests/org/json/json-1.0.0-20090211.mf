@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.json.json
+Bundle-Name: net.echinopsii.3rdparty.json
+Bundle-Vendor: org.json (source) / echinopsii (bundle)
+Bundle-Version: 1.0.0

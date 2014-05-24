@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:infinispan:config:6.0 http://www.infinispan.org/schemas/infinispan-config-6.0.xsd"
+        xmlns="urn:infinispan:config:6.0">
+
+   <global>
+      <globalJmxStatistics enabled="true" cacheManagerName="CC_ADDON_TIBCO_RV"/>
+   </global>
+
+    <namedCache name="cc.addon.tibco.rv.component.cache">
+        <persistence passivation="false">
+            <singleFile fetchPersistentState="true"
+                        ignoreModifications="false"
+                        purgeOnStartup="false" 
+			location="/CC/DEV/master/cc.environment/virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/addon/tibco/rv"/>
+        </persistence>
+    </namedCache>
+
+    <namedCache name="cc.addon.tibco.rv.gear.cache">
+        <eviction strategy="LRU" maxEntries="2000"/>
+        <persistence passivation="true">
+            <singleFile fetchPersistentState="true"
+                        ignoreModifications="false"
+                        purgeOnStartup="true" 
+			location="/CC/DEV/master/cc.environment/virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/addon/tibco/rv">
+                <async enabled="true"/>
+            </singleFile>
+        </persistence>
+    </namedCache>
+</infinispan>

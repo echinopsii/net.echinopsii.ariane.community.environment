@@ -1,0 +1,29 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.6&nbsp;Hibernate Resolution Issue</title><link rel="stylesheet" href="css/stylesheet.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><link rel="home" href="index.html" title="Virgo Programmer Guide"><link rel="up" href="ch08.html" title="8.&nbsp;Known Issues"><link rel="prev" href="ch08s05.html" title="8.5&nbsp;Default Web Application Bundle Headers"><link rel="next" href="ch08s07.html" title="8.7&nbsp;Scoping and Substitutable Exports"><!--Begin Google Analytics code--><script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-2728886-3");
+			pageTracker._setDomainName("none");
+			pageTracker._setAllowLinker(true);
+			pageTracker._trackPageview();
+		</script><!--End Google Analytics code--></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.6&nbsp;Hibernate Resolution Issue</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch08s05.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.&nbsp;Known Issues</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch08s07.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="hibernate-resolution-issue"></a>8.6&nbsp;Hibernate Resolution Issue</h2></div></div></div><p>
+			Applications using Hibernate 3.4.0.GA need to upgrade the JBoss Hibernate Entity manager fragment bundle to version 3.4.0.GA-A.
+			The symptoms are that the application will fail to resolve due to missing imports of packages such as <code class="literal">org.hibernate.ejb.transaction</code> 
+			and JBoss Hibernate Annotations <code class="literal">com.springsource.org.hibernate.annotations</code>.
+			See <a class="ulink" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=335174" target="_top">bug 335174</a> for details.
+		</p><p>
+			The JBoss Hibernate Entity manager fragment bundle <code class="literal">com.springsource.org.hibernate.ejb</code> v3.4.0.GA in the
+			<a class="ulink" href="http://ebr.springsource.com/repository/app/" target="_top">SpringSource Enterprise Bundle Repository</a>
+			depends on the package <code class="literal">org.slf4j</code> with a version range that excludes the version of the
+			package provided with Virgo. The net effect is that Hibernate EJB fragment bundle fails to attach to its host
+			<code class="literal">com.springsource.org.hibernate</code> and the host then does not export the packages the application
+			may need, such as <code class="literal">org.hibernate.ejb.transaction</code>.
+		</p><p>
+			An updated JBoss Hibernate Entity manager fragment and JBoss Hibernate Annotations with versions 3.4.0.GA-A which fixes this 
+			problem is available from the <a class="ulink" href="http://ebr.springsource.com/repository/app/" target="_top">SpringSource Enterprise Bundle Repository</a>.
+		</p></div><!--Begin LoopFuse code--><script src="http://loopfuse.net/webrecorder/js/listen.js" type="text/javascript"></script><script type="text/javascript">
+			_lf_cid = "LF_48be82fa";
+			_lf_remora();
+		</script><!--End LoopFuse code--><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch08s05.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch08.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch08s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.5&nbsp;Default Web Application Bundle Headers&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.7&nbsp;Scoping and Substitutable Exports</td></tr></table></div></body></html>

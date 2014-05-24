@@ -1,0 +1,7 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.antlr
+Bundle-Name: net.echinopsii.3rdparty.antlr
+Bundle-Vendor: antlr.org (source) / echinopsii (bundle)
+Bundle-Version: 2.7.7
+Import-Package:
+  junit.framework;version="[4.2.0,4.3.0)";resolution:=optional
