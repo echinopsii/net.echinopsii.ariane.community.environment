@@ -88,85 +88,65 @@
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.idm.base">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.idm.base">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.portal.wab">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.portal.wab">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.portal.wat">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.portal.wat">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.portal.idmwat">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.portal.idmwat">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.portal.base">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.portal.base">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.directory.base">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.directory.base">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.directory.wat">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.directory.wat">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.injector.base">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.injector.base">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.injector.wat">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.injector.wat">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.mapping.ds.blueprintsimpl">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.blueprintsimpl">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.mapping.ds.rim">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.rim">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.core.mapping.wat">
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.wat">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
 	</logger>
-
-        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.addon.tibco.rv.directory">
-                <appender-ref ref="SIFTED_LOG_FILE" />
-                <appender-ref ref="LOG_FILE" />
-        </logger>
-
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.addon.tibco.rv.injector">
-		<appender-ref ref="SIFTED_LOG_FILE" />
-		<appender-ref ref="LOG_FILE" />
-	</logger>
-
-	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.addon.tibco.rv.htmlparser">
-		<appender-ref ref="SIFTED_LOG_FILE" />
-		<appender-ref ref="LOG_FILE" />
-	</logger>
-
-	<root level="WARN">
-		<appender-ref ref="SIFTED_LOG_FILE" />
-		<appender-ref ref="LOG_FILE" />
-	</root>
 
 </configuration>

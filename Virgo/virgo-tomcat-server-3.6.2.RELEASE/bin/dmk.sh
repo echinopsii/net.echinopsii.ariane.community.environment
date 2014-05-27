@@ -194,13 +194,11 @@ then
                     -XX:MaxPermSize=1024m"
 
     CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.core.directory_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.core.directory_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.core.idm_0.4.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.core.idm_0.4.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.core.injector_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.core.injector_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.core.mapping_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.core.mapping_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.core.portal_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.core.portal_0.5.0.SNAPSHOT.plan
-    PLUGS_REPO_HOME=$KERNEL_HOME/repository/ariane-plugins
-    cp $PLUGS_REPO_HOME/net.echinopsii.ariane.addon.tibco.rv_0.5.0.SNAPSHOT.plan.$USER $PLUGS_REPO_HOME/net.echinopsii.ariane.addon.tibco.rv_0.5.0.SNAPSHOT.plan
+    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.directory_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.directory_0.5.0.SNAPSHOT.plan
+    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.idm_0.4.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.idm_0.4.0.SNAPSHOT.plan
+    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.injector_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.injector_0.5.0.SNAPSHOT.plan
+    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_0.5.0.SNAPSHOT.plan
+    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.portal_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.portal_0.5.0.SNAPSHOT.plan
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
 			$JAVA_OPTS \
