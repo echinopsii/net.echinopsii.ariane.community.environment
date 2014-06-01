@@ -14,7 +14,7 @@ Import-Package:
   org.neo4j.graphdb.index; version="[1.9.2,2)",
   org.neo4j.index.lucene.unsafe.batchinsert; version="[1.9.2,2)",
   org.neo4j.kernel; version="[1.9.2,2)",
-  org.neo4j.kernel.ha; version="[1.9.2,2)",
+  org.neo4j.kernel.ha; version="[1.9.2,2)";resolution:=optional,
   org.neo4j.kernel.impl.core; version="[1.9.2,2)",
   org.neo4j.tooling; version="[1.9.2,2)",
   org.neo4j.unsafe.batchinsert; version="[1.9.2,2)"
