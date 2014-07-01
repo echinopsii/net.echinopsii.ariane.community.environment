@@ -193,12 +193,22 @@ then
                     -Xmx1024m \
                     -XX:MaxPermSize=1024m"
 
-    CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.directory_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.directory_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.idm_0.4.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.idm_0.4.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.injector_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.injector_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_0.5.0.SNAPSHOT.plan
-    cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.portal_0.5.0.SNAPSHOT.plan.$USER $CORE_REPO_HOME/net.echinopsii.ariane.community.core.portal_0.5.0.SNAPSHOT.plan
+	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
+
+	for infile in `ls $CORE_REPO_HOME | grep plan.tpl`
+	do
+	    outfile=`echo $infile | sed "s/.tpl//g"`
+	    sed "s#%%USERHOME#$HOME#g" $CORE_REPO_HOME/$infile > $CORE_REPO_HOME/$outfile
+	done
+
+	PLUGIN_REPO_HOME=$KERNEL_HOME/repository/ariane-plugins
+	for infile in `ls $PLUGIN_REPO_HOME | grep plan.tpl`
+	do
+	    outfile=`echo $infile | sed "s/.tpl//g"`
+	    sed "s#%%USERHOME#$HOME#g" $PLUGIN_REPO_HOME/$infile > $PLUGIN_REPO_HOME/$outfile
+	done
+
+	sed "s#%%KERNEL_HOME#$KERNEL_HOME#g" $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default.tpl > $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
 			$JAVA_OPTS \
