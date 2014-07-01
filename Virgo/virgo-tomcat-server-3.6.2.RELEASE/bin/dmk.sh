@@ -29,6 +29,7 @@ then
 	. $KERNEL_HOME/bin/setenv.sh
 fi
 
+$KERNEL_HOME/bin/syncwebdev.sh
 
 # Run java version check with the discovered java jvm.
 . "$KERNEL_HOME/bin/checkJava.sh"

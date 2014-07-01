@@ -1,5 +1,7 @@
 #/bin/sh
 
+HERE=`pwd`
+
 SCRIPT="$0"
 
 # SCRIPT may be an arbitrarily deep series of symlinks. Loop until we have the concrete path.
@@ -20,6 +22,8 @@ KERNEL_HOME=`dirname "$SCRIPT"`/..
 # make KERNEL_HOME absolute
 KERNEL_HOME=`cd "$KERNEL_HOME"; pwd`
 
+cd $KERNEL_HOME
+
 cd ../../../
 
 ARIANE_HOME=`pwd`
@@ -33,6 +37,6 @@ cp -R $ARIANE_HOME/ariane.community.core.portal/wresources/ariane/static/* $KERN
 cp -R $ARIANE_HOME/ariane.community.core.mapping/taitale/ariane/static/* $KERNEL_HOME/ariane/static/
 
 
-
+cd $HERE
 
 
