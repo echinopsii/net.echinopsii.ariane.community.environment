@@ -6,10 +6,10 @@
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
 
         <artifact type="configuration" name="net.echinopsii.ariane.community.core.MappingRimManagedService"/>
-        <artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.api/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.api-0.5.0-SNAPSHOT.jar"/>
-	<artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.dsl-0.5.0-SNAPSHOT.jar"/>
-        <artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.blueprints-0.5.0-SNAPSHOT.jar"/>
-        <artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.rim-0.5.0-SNAPSHOT.jar"/>
-	<artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.wat-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.api/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.api-0.5.0-SNAPSHOT.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.dsl-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.blueprints-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.rim-0.5.0-SNAPSHOT.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.wat-0.5.0-SNAPSHOT.jar"/>
 
 </plan>

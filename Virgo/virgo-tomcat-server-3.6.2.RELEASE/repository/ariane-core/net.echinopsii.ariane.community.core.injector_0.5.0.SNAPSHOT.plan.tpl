@@ -4,6 +4,6 @@
 				xsi:schemaLocation="
 				        http://www.eclipse.org/virgo/schema/plan 
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
-        <artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.base/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.injector.base-0.5.0-SNAPSHOT.jar"/>
-        <artifact uri="file:##USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.wat/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.injector.wat-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.base/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.injector.base-0.5.0-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.wat/0.5.0-SNAPSHOT/net.echinopsii.ariane.community.core.injector.wat-0.5.0-SNAPSHOT.jar"/>
 </plan>
