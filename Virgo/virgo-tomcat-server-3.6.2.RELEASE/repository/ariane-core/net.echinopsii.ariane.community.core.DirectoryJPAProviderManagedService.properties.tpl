@@ -11,9 +11,9 @@
 hibernate.connection.driver_class=org.mariadb.jdbc.Driver
 #hibernate.connection.driver_class=com.mysql.jdbc.Driver
 hibernate.dialect=org.hibernate.dialect.MySQLDialect
-hibernate.connection.url=jdbc:mysql://env-mffrench.lab01.dev:3306/ariane_directory
-hibernate.connection.username=ariane
-hibernate.connection.password=password
+hibernate.connection.url=%%DIRECTORY_DB_URL
+hibernate.connection.username=%%DIRECTORY_DB_USER
+hibernate.connection.password=%%DIRECTORY_DB_PWD
 hibernate.hbm2ddl.auto=update
 hibernate.c3p0.min_size=5
 hibernate.c3p0.max_size=40

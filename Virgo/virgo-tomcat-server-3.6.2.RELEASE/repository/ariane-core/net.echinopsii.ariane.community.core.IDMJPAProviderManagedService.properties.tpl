@@ -9,14 +9,20 @@
 
 # - hibernate mariadb base configuration
 hibernate.connection.driver_class=org.mariadb.jdbc.Driver
-#hibernate.connection.driver_class=com.mysql.jdbc.Driver
 hibernate.dialect=org.hibernate.dialect.MySQLDialect
-hibernate.connection.url=jdbc:mysql://env-mffrench.lab01.dev:3306/ariane_directory
-hibernate.connection.username=ariane
-hibernate.connection.password=password
+hibernate.connection.url=%%IDM_DB_URL
+hibernate.connection.username=%%IDM_DB_USER
+hibernate.connection.password=%%IDM_DB_PWD
 hibernate.hbm2ddl.auto=update
 hibernate.c3p0.min_size=5
 hibernate.c3p0.max_size=40
 hibernate.c3p0.timeout=300
 hibernate.c3p0.max_statements=50
 hibernate.c3p0.idle_test_period=100
+#hibernate.show_sql=true
+#hibernate.format_sql=true
+#hibernate.use_sql_comments=true
+hibernate.cache.use_second_level_cache=true
+hibernate.cache.use_query_cache=true
+hibernate.cache.region.factory_class=org.hibernate.cache.infinispan.InfinispanRegionFactory
+hibernate.cache.infinispan.cfg=infinispan.idm.cache.xml

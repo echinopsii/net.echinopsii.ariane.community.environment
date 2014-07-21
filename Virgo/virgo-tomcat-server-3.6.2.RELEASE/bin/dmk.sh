@@ -195,11 +195,25 @@ then
                     -XX:MaxPermSize=1024m"
 
 	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
-
 	for infile in `ls $CORE_REPO_HOME | grep plan.tpl`
 	do
 	    outfile=`echo $infile | sed "s/.tpl//g"`
 	    sed "s#%%USERHOME#$HOME#g" $CORE_REPO_HOME/$infile > $CORE_REPO_HOME/$outfile
+	done
+
+	for infile in `ls $CORE_REPO_HOME | grep properties.tpl`
+	do
+	    outfile=`echo $infile | sed "s/.tpl//g"`
+
+	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $CORE_REPO_HOME/$infile > $CORE_REPO_HOME/$outfile
+	    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $CORE_REPO_HOME/$outfile
+	    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $CORE_REPO_HOME/$outfile
+
+	    sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $CORE_REPO_HOME/$outfile
+	    sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $CORE_REPO_HOME/$outfile
+	    sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $CORE_REPO_HOME/$outfile
+
+	    sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $CORE_REPO_HOME/$outfile
 	done
 
 	PLUGIN_REPO_HOME=$KERNEL_HOME/repository/ariane-plugins
