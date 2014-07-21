@@ -223,6 +223,12 @@ then
 	    sed "s#%%USERHOME#$HOME#g" $PLUGIN_REPO_HOME/$infile > $PLUGIN_REPO_HOME/$outfile
 	done
 
+	for infile in `ls $PLUGIN_REPO_HOME | grep properties.tpl`
+	do
+		outfile=`echo $infile | sed "s/.tpl//g"`
+		sed "s#%%VIRGO_HOME#$KERNEL_HOME#g" $PLUGIN_REPO_HOME/$infile > $PLUGIN_REPO_HOME/$outfile
+	done
+
 	sed "s#%%KERNEL_HOME#$KERNEL_HOME#g" $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default.tpl > $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
