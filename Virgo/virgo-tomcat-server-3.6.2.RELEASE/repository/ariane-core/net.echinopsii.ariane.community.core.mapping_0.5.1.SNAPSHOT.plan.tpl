@@ -1,4 +1,4 @@
-<plan name="net.echinopsii.ariane.community.core.mapping" version="0.5.0.SNAPSHOT" scoped="false" atomic="false"
+<plan name="net.echinopsii.ariane.community.core.mapping" version="0.5.1.SNAPSHOT" scoped="false" atomic="false"
                 xmlns="http://www.eclipse.org/virgo/schema/plan"
 				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				xsi:schemaLocation="
