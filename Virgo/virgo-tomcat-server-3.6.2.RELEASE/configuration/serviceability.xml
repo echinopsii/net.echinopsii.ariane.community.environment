@@ -149,11 +149,6 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-        <logger level="DEBUG" additivity="false" name="akka.sample.osgi">
-                <appender-ref ref="SIFTED_LOG_FILE" />
-                <appender-ref ref="LOG_FILE" />
-        </logger>
-
 	<root level="WARN">
  		<appender-ref ref="SIFTED_LOG_FILE" />
  		<appender-ref ref="LOG_FILE" />
