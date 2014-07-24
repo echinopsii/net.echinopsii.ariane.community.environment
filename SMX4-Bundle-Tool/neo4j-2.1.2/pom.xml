@@ -30,7 +30,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.neo4j</artifactId>
-    <version>1.9.5</version>
+    <version>2.1.2</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: neo4j</name>
     <description>
@@ -39,7 +39,7 @@
 
     <properties>
         <pkgGroupId>org.neo4j</pkgGroupId>
-        <pkgVersion>1.9.5</pkgVersion>
+        <pkgVersion>2.1.2</pkgVersion>
 	<servicemix.osgi.bundle.classpath>
 	  .,META-INF/services/
         </servicemix.osgi.bundle.classpath>
@@ -47,89 +47,77 @@
             org.neo4j
         </servicemix.osgi.export.pkg>
 	<servicemix.osgi.private.pkg>
-	    ch.qos.logback*,
 	    com.sun.jersey*,
 	    com.sun.research.ws.wadl,
 	    com.sun.ws.rs.ext,
 	    javax.ws*;-split-package:=merge-first,
-	    org.mortbay*,
-            org.slf4j*;-split-package:=merge-first
+	    org.eclipse.jetty*
 	</servicemix.osgi.private.pkg>
-        <servicemix.osgi.import.pkg>
-            com.googlecode*;resolution:=optional,
-            com.mysema.query;resolution:=optional, 
-            com.mysema.query.lucene;resolution:=optional, 
-            com.mysema.query.types;resolution:=optional, 
-            com.mysema.query.types.path;resolution:=optional,
-	    com.sun.net.httpserver;resolution:=optional,
-            com.sun.source*;resolution:=optional,
-            com.sun.tools*;resolution:=optional,
-	    com.tinkerpop.blueprints*;resolution:=optional,
-	    com.tinkerpop.gremlin*;resolution:=optional,
-	    com.tinkerpop.pipes*;resolution:=optional,
-	    groovy.lang;resolution:=optional,
-	    javax.activation,
-            javax.annotation*,
-	    javax.crypto*,
-	    javax.ejb,
-	    javax.enterprise*;resolution:=optional,
-	    javax.imageio*,
-	    javax.inject;resolution:=optional,
-	    javax.interceptor,
-            javax.lang*,
-	    javax.jms;resolution:=optional,
-            javax.management*,
-	    javax.mail*,
-	    javax.naming,
-	    javax.net.ssl,
-	    javax.persistence,
-	    javax.script,
-	    javax.security.cert,
-	    javax.servlet*;resolution:=optional,
-	    javax.sql;resolution:=optional,
-            javax.tools,
-            javax.transaction*,
-	    javax.xml.bind*,
-	    javax.xml.namespace,
-	    javax.xml.parsers,
-	    javax.xml.stream,
-	    javax.xml.transform*,
-	    javax.rmi.ssl,
-	    javax.swing,
-	    jline,
-	    org.apache.catalina*;resolution:=optional,
-            org.apache.commons.configuration;resolution:=optional, 
-	    org.apache.commons.io;resolution:=optional,
-	    org.apache.log4j*;resolution:=optional,
-            org.apache.lucene*,
-	    org.apache.tools*,
-	    org.apache.zookeeper*;resolution:=optional,
-	    org.bouncycastle*;resolution:=optional,
-	    org.codehaus.groovy*;resolution:=optional,
-            org.codehaus.jackson*;resolution:=optional, 
-	    org.codehaus.janino;resolution:=optional,
-	    org.codehaus.commons.compiler;resolution:=optional,
-	    org.eclipse.jetty*;resolution:=optional,
-	    org.eclipse.virgo.medic.log.logback;resolution:=optional,
-	    org.jboss.netty*;resolution:=optional,	    
-	    org.jvnet.mimepull,
-	    org.mozilla.javascript;resolution:=optional,
-	    org.objectweb.asm;resolution:=optional,
-            org.osgi.framework,
-	    org.rrd4j*;resolution:=optional,
-	    org.w3c.dom;resolution:=optional,
-	    org.xml.sax*,
-            scala*;resolution:=optional,
-            sun.misc;resolution:=optional,
-	    sun.reflect;resolution:=optional
-        </servicemix.osgi.import.pkg>
+	<servicemix.osgi.import.pkg>
+		au.com.bytecode.opencsv,
+		ch.qos.logback*,
+		com.googlecode*;resolution:=optional,
+	        com.sun.management,
+		com.sun.net.httpserver;resolution:=optional,
+                com.sun.source*;resolution:=optional,
+                com.sun.tools*;resolution:=optional,
+		groovy.lang;resolution:=optional,
+		javax.activation,
+		javax.annotation*,
+		javax.crypto*,
+		javax.ejb,
+	        javax.enterprise*;resolution:=optional,
+        	javax.imageio*,
+	        javax.inject;resolution:=optional,
+        	javax.interceptor,
+	        javax.lang*,
+        	javax.jms;resolution:=optional,
+	        javax.management*,
+        	javax.mail*,
+	        javax.naming,
+        	javax.net.ssl,
+	        javax.persistence,
+	        javax.script,
+        	javax.security*,
+	        javax.servlet*;resolution:=optional,
+        	javax.sql;resolution:=optional,
+	        javax.tools,
+        	javax.transaction*,
+	        javax.xml.bind*,
+        	javax.xml.namespace,
+	        javax.xml.parsers,
+        	javax.xml.stream,
+	        javax.xml.transform*,
+	        jline,
+	        org.apache.commons.configuration;resolution:=optional, 
+        	org.apache.commons.io;resolution:=optional,
+		org.apache.lucene*,
+		org.apache.tools*,
+	        org.bouncycastle*;resolution:=optional,
+	        <!--org.codehaus.groovy*;resolution:=optional,-->
+        	org.codehaus.jackson*;resolution:=optional, 
+	        org.codehaus.janino;resolution:=optional,
+		org.ietf.jgss,
+	        org.jvnet.mimepull,
+	        org.mozilla.javascript;resolution:=optional,
+	        org.objectweb.asm;resolution:=optional,
+	        org.osgi.framework,
+		org.parboiled*,
+	        org.rrd4j*;resolution:=optional,
+		org.slf4j*,
+	        org.w3c.dom;resolution:=optional,
+	        org.xml.sax*,
+	        scala*;resolution:=optional,
+	        sun.misc;resolution:=optional
+	        <!--sun.reflect;resolution:=optional-->
+	</servicemix.osgi.import.pkg>
     </properties>
 
     <repositories>
         <repository>
-            <id>neo4j.repo</id>
-            <name>neo4j Repository</name>
-            <url>http://m2.neo4j.org/content/repositories/releases</url>
+            <id>nexus.echinopsii.net</id>
+            <name>echinopsii.net repository</name>
+            <url>http://nexus.echinopsii.net/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -180,16 +168,20 @@
             <artifactId>neo4j-jmx</artifactId>
             <version>${pkgVersion}</version>
         </dependency>
+	<!--
         <dependency>
             <groupId>${pkgGroupId}</groupId>
             <artifactId>neo4j-rest-graphdb</artifactId>
             <version>1.9</version>
         </dependency>
+	-->
+	<!--
         <dependency>
             <groupId>${pkgGroupId}</groupId>
             <artifactId>neo4j-cypher-dsl</artifactId>
             <version>1.9</version>
         </dependency>
+	-->
 	<dependency>
 	    <groupId>org.neo4j.app</groupId>
 	    <artifactId>neo4j-server</artifactId>
@@ -201,6 +193,7 @@
 	    <classifier>static-web</classifier>
             <version>${pkgVersion}</version>
         </dependency>
+	<!--
 	<dependency>
 	    <groupId>org.neo4j.server.plugin</groupId>
 	    <artifactId>neo4j-gremlin-plugin</artifactId>
@@ -211,21 +204,7 @@
 	    <artifactId>authentication-extension</artifactId>
 	    <version>${pkgVersion}</version>
 	</dependency>
-	<dependency>
-	    <groupId>ch.qos.logback</groupId>
-	    <artifactId>logback-access</artifactId>
-	    <version>0.9.30</version>
-	</dependency>
-	<dependency>
-	    <groupId>ch.qos.logback</groupId>
-	    <artifactId>logback-classic</artifactId>
-	    <version>0.9.30</version>
-	</dependency>
-	<dependency>
-	    <groupId>ch.qos.logback</groupId>
-	    <artifactId>logback-core</artifactId>
-	    <version>0.9.30</version>
-	</dependency>
+	-->
 	<dependency>
 	    <groupId>com.sun.jersey</groupId>
 	    <artifactId>jersey-core</artifactId>
@@ -247,20 +226,50 @@
 	    <version>1.9</version>
 	</dependency>
 	<dependency>
-	    <groupId>org.mortbay.jetty</groupId>
-	    <artifactId>jetty</artifactId>
-	    <version>6.1.25</version>
+	    <groupId>org.eclipse.jetty</groupId>
+	    <artifactId>jetty-http</artifactId>
+	    <version>9.0.5.v20130815</version>
 	</dependency>
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-api</artifactId>
-	    <version>1.6.2</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-simple</artifactId>
-	    <version>1.6.2</version>
-	</dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-io</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jmx</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-security</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-xml</artifactId>
+            <version>9.0.5.v20130815</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -285,22 +294,37 @@
                                     <include>${pkgGroupId}:neo4j-graph-matching</include>
                                     <include>${pkgGroupId}:neo4j-cypher</include>
                                     <include>${pkgGroupId}:neo4j-jmx</include>
+				    <!--
                                     <include>${pkgGroupId}:neo4j-rest-graphdb</include>
                                     <include>${pkgGroupId}:neo4j-cypher-dsl</include>
+				    -->
+				    <!--
                                     <include>org.neo4j.server:authentication-extension</include>
 				    <include>org.neo4j.server.plugin:neo4j-gremlin-plugin</include>
+				    -->
 				    <include>org.neo4j.app:neo4j-server</include>
 				    <include>org.neo4j.app:neo4j-server:static-web</include>		    
 				    <include>com.sun.jersey:jersey-core</include>
 				    <include>com.sun.jersey:jersey-server</include>
 				    <include>com.sun.jersey:jersey-client</include>
 				    <include>com.sun.jersey.contribs:jersey-multipart</include>
+				    <include>org.eclipse.jetty:jetty-http</include>
+                                    <include>org.eclipse.jetty:jetty-io</include>	
+                                    <include>org.eclipse.jetty:jetty-jmx</include>
+                                    <include>org.eclipse.jetty:jetty-security</include>
+                                    <include>org.eclipse.jetty:jetty-server</include>
+                                    <include>org.eclipse.jetty:jetty-servlet</include>
+                                    <include>org.eclipse.jetty:jetty-util</include>
+                                    <include>org.eclipse.jetty:jetty-webapp</include>
+                                    <include>org.eclipse.jetty:jetty-xml</include>
+				    <!--
 				    <include>org.mortbay.jetty:jetty</include>
 				    <include>ch.qos.logback:logback-access</include>
 				    <include>ch.qos.logback:logback-classic</include>
 				    <include>ch.qos.logback:logback-core</include>
 				    <include>org.slf4j:slf4j-api</include>
 				    <include>org.slf4j:slf4j-simple</include>
+				    -->
                                 </includes>
                             </artifactSet>
                             <filters>
@@ -318,6 +342,7 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
+				<!--
                                 <filter>
                                     <artifact>${pkgGroupId}:neo4j-cypher-dsl</artifact>
                                     <includes>
@@ -325,6 +350,7 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>				
+				-->
                                 <filter>
                                     <artifact>${pkgGroupId}:neo4j-graph-algo</artifact>
                                     <includes>
@@ -360,6 +386,7 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
+				<!--
                                 <filter>
                                     <artifact>${pkgGroupId}:neo4j-rest-graphdb</artifact>
                                     <includes>
@@ -367,6 +394,7 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
+				-->
                                 <filter>
                                     <artifact>${pkgGroupId}:neo4j-shell</artifact>
                                     <includes>
@@ -389,6 +417,7 @@
 					<include>webadmin-html/</include>
                                     </includes>
                                 </filter>
+				<!--
                                 <filter>
                                     <artifact>org.neo4j.server:authentication-extension</artifact>
                                     <includes>
@@ -403,6 +432,8 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
+				-->
+				<!--
                                 <filter>
                                     <artifact>ch.qos.logback:logback-access</artifact>
                                     <includes>
@@ -424,6 +455,7 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
+				-->
                                 <filter>
                                     <artifact>com.sun.jersey:jersey-core</artifact>
                                     <includes>
@@ -452,25 +484,67 @@
 					<include>META-INF/services/</include>
                                     </includes>
                                 </filter>
-                                <filter>
-                                    <artifact>org.mortbay.jetty:jetty</artifact>
+				<filter>
+				    <artifact>org.eclipse.jetty:jetty-http</artifact>
                                     <includes>
                                         <include>**/*.xml</include>
-					<include>META-INF/services/</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+				</filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-io</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
                                     </includes>
                                 </filter>
                                 <filter>
-                                    <artifact>org.sl4j:slf4j-api</artifact>
+                                    <artifact>org.eclipse.jetty:jetty-jmx</artifact>
                                     <includes>
                                         <include>**/*.xml</include>
-					<include>META-INF/services/</include>
+                                        <include>META-INF/services/</include>
                                     </includes>
                                 </filter>
                                 <filter>
-                                    <artifact>org.sl4j:slf4j-simple</artifact>
+                                    <artifact>org.eclipse.jetty:jetty-security</artifact>
                                     <includes>
                                         <include>**/*.xml</include>
-					<include>META-INF/services/</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-server</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-servlet</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-util</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-webapp</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
+                                    </includes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.eclipse.jetty:jetty-xml</artifact>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>META-INF/services/</include>
                                     </includes>
                                 </filter>
                             </filters>

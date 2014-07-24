@@ -125,11 +125,12 @@
         </servicemix.osgi.import.pkg>
     </properties>
 
+
     <repositories>
         <repository>
-            <id>neo4j.repo</id>
-            <name>neo4j Repository</name>
-            <url>http://m2.neo4j.org/content/repositories/releases</url>
+            <id>nexus.echinopsii.net</id>
+            <name>echinopsii.net repository</name>
+            <url>http://nexus.echinopsii.net/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -138,6 +139,7 @@
             </snapshots>
         </repository>
     </repositories>    
+
 
     <dependencies>
         <dependency>
