@@ -1,0 +1,11 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.iq80.leveldb.leveldb
+Bundle-Name: net.echinopsii.3rdparty.org.iq80.leveldb.leveldb
+Bundle-Vendor: iq80 (orginal package) / echinopsii (bundle)
+Bundle-Description: iq80 leveldb
+Bundle-Version: 0.5.0
+Import-Template:
+  com.google.common*;version="12.0.0",
+  org.iq80.leveldb;version="0.5.0",
+  org.iq80.snappy;version="0.3.0";resolution:="optional",
+  org.xerial.snappy;resolution:="optional"
