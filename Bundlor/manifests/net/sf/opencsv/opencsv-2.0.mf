@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.net.sf.opencsv
+Bundle-Name: net.echinopsii.3rdparty.net.sf.opencsv
+Bundle-Vendor: opencsv (source) / echinopsii (bundle)
+Bundle-Version: 2.0.0

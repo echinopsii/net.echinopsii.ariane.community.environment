@@ -1,0 +1,7 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.mozilla.rhino
+Bundle-Name: net.echinopsii.3rdparty.org.mozilla.rhino
+Bundle-Vendor: org.mozilla (source) / echinopsii (bundle)
+Bundle-Version: 1.7.4
+Import-Package:
+  org.apache.xmlbeans;resolution:=optional  
