@@ -1,0 +1,5 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.echinopsii.3rdparty.org.codehaus.janino.commons-compiler
+Bundle-Name: net.echinopsii.3rdparty.org.codehaus.janino.commons-compiler
+Bundle-Vendor: codehaus (source) / echinopsii (bundle)
+Bundle-Version: 2.6.1
