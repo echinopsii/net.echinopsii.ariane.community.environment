@@ -51,13 +51,16 @@
 	    com.sun.research.ws.wadl,
 	    com.sun.ws.rs.ext,
 	    javax.ws*;-split-package:=merge-first,
-	    org.eclipse.jetty*
+	    org.eclipse.jetty*,
+  	    ch.qos.logback.access*
 	</servicemix.osgi.private.pkg>
 	<servicemix.osgi.import.pkg>
 		au.com.bytecode.opencsv,
-		ch.qos.logback*,
+		ch.qos.logback.classic*;version="[1.0.0,2.0.0)", 
+		ch.qos.logback.core*;version="[1.0.0,2.0.0)", 
+		<!--ch.qos.logback*;version="[1.0.0,2.0.0)",-->
 		com.googlecode*;resolution:=optional,
-	        com.sun.management,
+	        com.sun.management;resolution:=optional,
 		com.sun.net.httpserver;resolution:=optional,
                 com.sun.source*;resolution:=optional,
                 com.sun.tools*;resolution:=optional,
@@ -92,6 +95,7 @@
         	javax.xml.stream,
 	        javax.xml.transform*,
 	        jline,
+		org.apache.catalina*;resolution:=optional,
 	        org.apache.commons.configuration;resolution:=optional,
         	org.apache.commons.io;resolution:=optional,
 		org.apache.lucene*,
@@ -294,6 +298,11 @@
             <artifactId>jetty-xml</artifactId>
             <version>9.0.5.v20130815</version>
         </dependency>
+	<dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-access</artifactId>
+		<version>1.0.7</version>
+	</dependency>
     </dependencies>
 
     <build>

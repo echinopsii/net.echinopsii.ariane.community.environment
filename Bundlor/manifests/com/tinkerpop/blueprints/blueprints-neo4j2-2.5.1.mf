@@ -6,6 +6,7 @@ Bundle-Version: 2.5.1
 Import-Package:
   com.tinkerpop.blueprints; version="2.5.1",
   com.tinkerpop.blueprints.util; version="2.5.1",
+  com.tinkerpop.rexster.config; version="2.5.0"; resolution:=optional,
   javax.transaction;version="0",
   org.apache.commons.configuration; version="[1.6,2)",
   org.neo4j.graphdb; version="[2.0,2.2)",
@@ -17,4 +18,7 @@ Import-Package:
   org.neo4j.kernel.ha; version="[2.0,2.2)";resolution:=optional,
   org.neo4j.kernel.impl.core; version="[2.0,2.2)",
   org.neo4j.tooling; version="[2.0,2.2)",
-  org.neo4j.unsafe.batchinsert; version="[2.0,2.2)"
+  org.neo4j.unsafe.batchinsert; version="[2.0,2.2)",
+  org.neo4j.cypher.javacompat;version="[2.0,2.2)",
+  org.neo4j.kernel.impl.transaction;version="[2.0,2.2)"
+

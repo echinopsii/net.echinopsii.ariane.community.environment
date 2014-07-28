@@ -73,6 +73,11 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
+        <logger level="WARN" additivity="false" name="org.neo4j">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
         <logger level="WARN" additivity="false" name="org.hibernate">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
