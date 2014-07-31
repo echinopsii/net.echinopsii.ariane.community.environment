@@ -229,7 +229,7 @@ then
 		sed "s#%%VIRGO_HOME#$KERNEL_HOME#g" $PLUGIN_REPO_HOME/$infile > $PLUGIN_REPO_HOME/$outfile
 	done
 
-	for infile in `find $KERNEL_HOME/ariane -name "*.tpl"` 
+	for infile in `find  -L $KERNEL_HOME/ariane -name "*.tpl"` 
 	do
 	    outfile=`echo $infile | sed "s/.tpl//g"`
 	    sed "s#%%VIRGO_HOME#$KERNEL_HOME#g" $infile > $outfile

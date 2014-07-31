@@ -9,4 +9,5 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/work/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/data/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/graph/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/usr/
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/conf/neo4j-server.properties
 */**/target
