@@ -13,7 +13,7 @@
         <persistence passivation="true">
             <singleFile fetchPersistentState="true"
                         ignoreModifications="false"
-                        purgeOnStartup="true" 
+                        purgeOnStartup="false" 
 			location="%%VIRGO_HOME/ariane/cache/core/injector">
                 <async enabled="true"/>
             </singleFile>
