@@ -11,3 +11,8 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/graph/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/usr/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/conf/neo4j-server.properties
 */**/target
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.injector.components.cache.xml
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.injector.gears.cache.xml
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.components.cache.dat
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.gears.cache.dat
+
