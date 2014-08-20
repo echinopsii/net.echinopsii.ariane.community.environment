@@ -8,10 +8,6 @@ RUN rpm -Uvh http://www.rabbitmq.com/releases/rabbitmq-server/v3.3.5/rabbitmq-se
 
 RUN rabbitmq-plugins enable amqp_client mochiweb webmachine rabbitmq_amqp1_0 rabbitmq_web_dispatch rabbitmq_management_agent rabbitmq_management rabbitmq_management_visualiser rabbitmq_federation rabbitmq_federation_management rabbitmq_mqtt rabbitmq_shovel rabbitmq_shovel_management rabbitmq_stomp rabbitmq_test rabbitmq_tracing 
 
-#RUN rabbitmqctl add_user dev ariane
-#RUN rabbitmqctl set_permissions ariane ".*" ".*" ".*"
-#RUN rabbitmqctl set_user_tags ariane administrator
-
 ADD run-rabbitmq-server.sh /run-rabbitmq-server.sh
 RUN chmod 750 ./run-rabbitmq-server.sh
 EXPOSE 5672 15672 4369 25672 61613 1883
