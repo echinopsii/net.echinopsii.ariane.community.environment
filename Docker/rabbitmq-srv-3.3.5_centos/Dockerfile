@@ -1,4 +1,4 @@
-FROM centos 
+FROM centos:centos6
 MAINTAINER Mathilde Ffrench <mathilde.ffrench@echinopsii.net>
 
 RUN yum -y update; yum clean all
