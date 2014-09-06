@@ -15,4 +15,6 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.in
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.injector.gears.cache.xml
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.components.cache.dat
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.gears.cache.dat
-
+Chef/.chef/*.pem
+Chef/.chef/encrypted_data_bag_secret
+Chef/.chef
