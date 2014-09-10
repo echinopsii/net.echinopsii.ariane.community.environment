@@ -6,4 +6,4 @@ validation_client_name      'chef-validator'
 validation_key              '/etc/chef/secure/validation.pem'
 client_key                  '/etc/chef/secure/client.pem'
 trusted_certs_dir           '/etc/chef/secure/trusted_certs'
-ssl_verify_mode             :verify_peer
+#ssl_verify_mode             :verify_peer
