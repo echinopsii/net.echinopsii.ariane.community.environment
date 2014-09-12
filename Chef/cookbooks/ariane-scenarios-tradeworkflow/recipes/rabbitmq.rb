@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ariane-scenarios-tradeworkflow
-# Recipe:: default
+# Recipe:: rabbitmq
 #
 # Copyright 2014, echinopsii
 #
