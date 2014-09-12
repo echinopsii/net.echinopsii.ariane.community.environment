@@ -2,12 +2,8 @@
 # Cookbook Name:: ariane-scenarios-tradeworkflow
 # Recipe:: default
 #
-# Copyright 2014, YOUR_COMPANY_NAME
+# Copyright 2014, echinopsii
 #
-# All rights reserved - Do Not Redistribute
+# All rights reserved - AGPLv3 licensed
 #
-
-include_recipe "rabbitmq"
-
-
 
