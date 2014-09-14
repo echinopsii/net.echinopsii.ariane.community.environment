@@ -33,7 +33,7 @@ rabbitmq_user "admin" do
   action :set_tags
 end
 
-rabbitmq_user "guest" do
-  action :delete
-end
+#rabbitmq_user "guest" do
+#  action :delete
+#end
 
