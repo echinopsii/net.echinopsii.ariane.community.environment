@@ -1,0 +1,5 @@
+{
+  "run_list": [
+	"recipe[ariane-scenarios-tradeworkflow::risk]"
+  ]
+}
