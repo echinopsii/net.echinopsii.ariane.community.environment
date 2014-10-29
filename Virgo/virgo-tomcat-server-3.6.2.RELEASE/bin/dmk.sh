@@ -214,7 +214,8 @@ then
                     sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $CORE_REPO_HOME/$outfile
                     sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $CORE_REPO_HOME/$outfile
 
-                    sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $CORE_REPO_HOME/$outfile	
+                    sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $CORE_REPO_HOME/$outfile
+		    rm ${CORE_REPO_HOME}/${outfile}.bu	
 	    else	
 		    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $CORE_REPO_HOME/$outfile
 		    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $CORE_REPO_HOME/$outfile
