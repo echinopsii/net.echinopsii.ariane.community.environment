@@ -154,6 +154,16 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
+        <logger level="DEBUG" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.directory">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
+        <logger level="DEBUG" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.injector">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
 	<root level="WARN">
  		<appender-ref ref="SIFTED_LOG_FILE" />
  		<appender-ref ref="LOG_FILE" />

@@ -4,5 +4,8 @@
 				xsi:schemaLocation="
 				        http://www.eclipse.org/virgo/schema/plan 
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+	<artifact type="configuration" name="net.echinopsii.ariane.community.plugin.rabbitmq.RabbitMQInjectorManagedService"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/plugin/rabbitmq/net.echinopsii.ariane.community.plugin.rabbitmq.directory/0.1.0-SNAPSHOT/net.echinopsii.ariane.community.plugin.rabbitmq.directory-0.1.0-SNAPSHOT.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/plugin/rabbitmq/net.echinopsii.ariane.community.plugin.rabbitmq.jsonparser/0.1.0-SNAPSHOT/net.echinopsii.ariane.community.plugin.rabbitmq.jsonparser-0.1.0-SNAPSHOT.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/plugin/rabbitmq/net.echinopsii.ariane.community.plugin.rabbitmq.injector/0.1.0-SNAPSHOT/net.echinopsii.ariane.community.plugin.rabbitmq.injector-0.1.0-SNAPSHOT.jar"/>
 </plan>
