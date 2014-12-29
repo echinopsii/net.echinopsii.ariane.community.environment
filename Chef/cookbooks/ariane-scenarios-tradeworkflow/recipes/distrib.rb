@@ -26,8 +26,8 @@ end
   end
 end
 
-remote_file "/opt/ariane/scenarios/tradeworkflow/net.echinopsii.ariane.community.scenarios.distrib-0.1.0.zip" do
-  source "http://nexus.echinopsii.net/nexus/content/groups/public/net/echinopsii/ariane/community/scenarios/net.echinopsii.ariane.community.scenarios.distrib/0.1.0/net.echinopsii.ariane.community.scenarios.distrib-0.1.0.zip"
+remote_file "/opt/ariane/scenarios/tradeworkflow/net.echinopsii.ariane.community.scenarios.distrib-0.2.0.zip" do
+  source "http://nexus.echinopsii.net/nexus/content/groups/public/net/echinopsii/ariane/community/scenarios/net.echinopsii.ariane.community.scenarios.distrib/0.2.0/net.echinopsii.ariane.community.scenarios.distrib-0.2.0.zip"
 end
 
 package "zip" do
@@ -36,7 +36,12 @@ end
 
 execute "unzip_distrib" do
 	cwd '/opt/ariane/scenarios/tradeworkflow/'
-	command 'unzip -n net.echinopsii.ariane.community.scenarios.distrib-0.1.0.zip'
+	command 'unzip -n net.echinopsii.ariane.community.scenarios.distrib-0.2.0.zip'
+end
+
+execute "rm_zip" do
+	cwd "/opt/ariane/scenarios/tradeworkflow/"
+	command "rm net.echinopsii.ariane.community.scenarios.distrib-0.2.0.zip"
 end
 
 #%w[ backoffice.properties feeder.properties frontoffice.properties middleoffice.properties risk.properties ].each do |conffile|
@@ -49,25 +54,25 @@ end
 
 execute "sed_rbmq_bo" do
 	cwd '/opt/ariane/scenarios/tradeworkflow/distrib/conf'
-	command 'sed -i "s/localhost/172.17.42.1/g" ./backoffice.properties'
+	command 'sed -i "s/localhost/172.17.0.2/g" ./backoffice.properties'
 end
 
 execute "sed_rbmq_feeder" do
         cwd '/opt/ariane/scenarios/tradeworkflow/distrib/conf'
-        command 'sed -i "s/localhost/172.17.42.1/g" ./feeder.properties'
+        command 'sed -i "s/localhost/172.17.0.2/g" ./feeder.properties'
 end
 
 execute "sed_rbmq_frontoffice" do
         cwd '/opt/ariane/scenarios/tradeworkflow/distrib/conf'
-        command 'sed -i "s/localhost/172.17.42.1/g" ./frontoffice.properties'
+        command 'sed -i "s/localhost/172.17.0.2/g" ./frontoffice.properties'
 end
 
 execute "sed_rbmq_middleoffice" do
         cwd '/opt/ariane/scenarios/tradeworkflow/distrib/conf'
-        command 'sed -i "s/localhost/172.17.42.1/g" ./middleoffice.properties'
+        command 'sed -i "s/localhost/172.17.0.2/g" ./middleoffice.properties'
 end
 
 execute "sed_rbmq_risk" do
         cwd '/opt/ariane/scenarios/tradeworkflow/distrib/conf'
-        command 'sed -i "s/localhost/172.17.42.1/g" ./risk.properties'
+        command 'sed -i "s/localhost/172.17.0.2/g" ./risk.properties'
 end
