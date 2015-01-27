@@ -154,12 +154,17 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
-        <logger level="DEBUG" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.directory">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.directory">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
 
-        <logger level="DEBUG" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.injector">
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.injector">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+	
+	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.plugin.rabbitmq.jsonparser">
                 <appender-ref ref="SIFTED_LOG_FILE" />
                 <appender-ref ref="LOG_FILE" />
         </logger>
