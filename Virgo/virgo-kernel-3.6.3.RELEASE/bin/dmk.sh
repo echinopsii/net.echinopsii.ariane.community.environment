@@ -189,8 +189,9 @@ then
 		mkdir -p $TMP_DIR
 
         JAVA_OPTS="$JAVA_OPTS \
-                    -Xmx512m \
-                    -XX:MaxPermSize=512m"
+		    -Xms1024m \
+                    -Xmx1024m \
+                    -XX:MaxPermSize=1024m"
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
 			$JAVA_OPTS \
@@ -206,15 +207,19 @@ then
 			-Dorg.eclipse.virgo.kernel.config=$CONFIG_DIR \
 			-Dosgi.sharedConfiguration.area=$CONFIG_DIR \
 			-Dosgi.java.profile="file:$JAVA_PROFILE" \
-            -Declipse.ignoreApp=true \
-            -Dosgi.install.area=$KERNEL_HOME \
-            -Dosgi.configuration.area=$CONFIG_AREA \
-            -Dssh.server.keystore="$CONFIG_DIR/hostkey.ser" \
-            -Dosgi.frameworkClassPath=$FWCLASSPATH \
-            -Djava.endorsed.dirs="$KERNEL_HOME/lib/endorsed" \
-            -classpath $CLASSPATH \
-			org.eclipse.equinox.launcher.Main \
-            -noExit \
+	                -Declipse.ignoreApp=true \
+		        -Dosgi.install.area=$KERNEL_HOME \
+	                -Dosgi.configuration.area=$CONFIG_AREA \
+	                -Dssh.server.keystore="$CONFIG_DIR/hostkey.ser" \
+                        -Dosgi.frameworkClassPath=$FWCLASSPATH \
+		        -Declipse.security=osgi \
+			-Djava.security.policy=$CONFIG_DIR/virgo.policy \
+			-Declipse.enableStateSaver=true \
+			-Djava.rmi.server.codebase="file://$KERNEL_HOME/repository/neo4j-community/net.echinopsii.3rdparty.org.neo4j.community.superbundle-2.1.2.jar"\
+	                -Djava.endorsed.dirs="$KERNEL_HOME/lib/endorsed" \
+	               -classpath $CLASSPATH \
+				org.eclipse.equinox.launcher.Main \
+	               -noExit \
 			$LAUNCH_OPTS \
 			$ADDITIONAL_ARGS
 	fi

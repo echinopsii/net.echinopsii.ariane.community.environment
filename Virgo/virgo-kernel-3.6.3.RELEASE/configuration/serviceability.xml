@@ -73,6 +73,11 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
+        <logger level="DEBUG" additivity="false" name="net.echinopsii.demo">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
 	<root level="INFO">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
