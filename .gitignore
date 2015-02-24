@@ -23,3 +23,6 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context
 Chef/.chef/*.pem
 Chef/.chef/encrypted_data_bag_secret
 Chef/.chef
+Virgo/virgo-kernel-3.6.3.RELEASE/configuration/hostkey.ser
+Virgo/virgo-kernel-3.6.3.RELEASE/serviceability/
+Virgo/virgo-kernel-3.6.3.RELEASE/work/
