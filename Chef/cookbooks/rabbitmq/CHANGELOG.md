@@ -2,6 +2,71 @@ rabbitmq Cookbook CHANGELOG
 ===========================
 This file is used to list changes made in each version of the rabbitmq cookbook.
 
+v3.9.0 (2015-01-28)
+------------------
+Song of this Release: [Cascade](http://www.pandora.com/hyper/we-control/cascade) by Hyper
+
+- Moved the service enable and start to the bottom of the default recipe so you can change variables around. Issue #201
+- syntax typos #208
+- LWRP for managing RabbitMQ parameters #207
+- Distro version pinning #211
+
+v3.8.0 (2015-01-07)
+------------------
+Song of this Release: Sunlight (2011) by by Modestep
+
+- Update to `3.4.3` release of rabbitmq
+- Updated from 12.04 to 14.04 for Ubuntu Specs
+
+v3.7.0 (2014-12-18)
+------------------
+- #185 Updated cloud kitchen.yml
+- #186 Updated chefspec for multiple oses
+- #180 Instead of defaulting to :upgrade we default to :install with the a pinned version number
+- #187 Updating Readme
+- #184 Supports setting rabbitmq config file to a different path
+
+v3.6.0 (2014-12-9)
+------------------
+- #161 Community plugins
+- #158 Adds policy apply_to option
+- #151 make config file template source cookbook configurable
+- #121 COOK-4694 Remove service restart for vhost mgmnt
+
+v3.5.1 (2014-12-5)
+-------------------
+- #176 Chef-client 12 released and the `PATH` attribute was removed.
+
+v3.5.0 (2014-12-2)
+-------------------
+Song of this Release: 0 to 100/The Catchup by Drake
+
+- Updated for the new release of RabbitMQ release 3.4.2
+- Removed the Centos 5.10 from integration testing
+- Updated the Gemfile for testing
+- #87 expose the heartbeat configuration parameter
+- #168 Initial Chefspec
+- #166 Updated to 3.4.2 release
+- d1bfae8 Rubocop'd all the things
+- ccf42a3 Started to get Travis to be our gatekeeper
+- #172 Updates ['rabbitmq']['config'] to use ['rabbitmq']['config_root'] attribute
+- #123 Add raw configuration for rabbitmq.erb
+
+v3.4.0 (2014-11-23)
+-------------------
+- Updated the RuboCop camel case
+- Make rabbitmq service restart immediately
+- Add sensitive flag for resources that expose passwords in log
+- Issue: #153
+- move serverspec v1 tests to use busser-rspec
+- Adding switch to make TCP listeners optional
+- Update user.rb
+- Update default.rb
+- Merge branch 'pr-128'
+- add serverspec tests for plugin lwrp
+- Plugin provider. fixes #141
+- Add test that fails if plugin notifications aren't working properly.
+
 v3.3.0 (2014-08-28)
 -------------------
 - Bump default rabbitmq-server version to 3.3.5

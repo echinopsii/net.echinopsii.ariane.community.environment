@@ -1,7 +1,9 @@
 # Latest RabbitMQ.com version to install
-default['rabbitmq']['version'] = '3.3.5'
+default['rabbitmq']['version'] = '3.4.3'
 # The distro versions may be more stable and have back-ported patches
 default['rabbitmq']['use_distro_version'] = false
+# Allow the distro version to be optionally pinned like the rabbitmq.com version
+default['rabbitmq']['pin_distro_version'] = false
 
 # being nil, the rabbitmq defaults will be used
 default['rabbitmq']['nodename']  = nil
@@ -16,12 +18,19 @@ default['rabbitmq']['service_name'] = 'rabbitmq-server'
 # http://www.rabbitmq.com/configure.html#define-environment-variables
 # "The .config extension is automatically appended by the Erlang runtime."
 default['rabbitmq']['config_root'] = '/etc/rabbitmq'
-default['rabbitmq']['config'] = '/etc/rabbitmq/rabbitmq'
+default['rabbitmq']['config'] = "#{node['rabbitmq']['config_root']}/rabbitmq"
 default['rabbitmq']['erlang_cookie_path'] = '/var/lib/rabbitmq/.erlang.cookie'
+# override this if you wish to provide `rabbitmq.config.erb` in your own wrapper cookbook
+default['rabbitmq']['config_template_cookbook'] = 'rabbitmq'
 
 # rabbitmq.config defaults
 default['rabbitmq']['default_user'] = 'guest'
 default['rabbitmq']['default_pass'] = 'guest'
+
+# loopback_users
+# List of users which are only permitted to connect to the broker via a loopback interface (i.e. localhost).
+# If you wish to allow the default guest user to connect remotely, you need to change this to [].
+default['rabbitmq']['loopback_users'] = nil
 
 # Erlang kernel application options
 # See http://www.erlang.org/doc/man/kernel_app.html
@@ -58,6 +67,7 @@ default['rabbitmq']['web_console_ssl'] = false
 default['rabbitmq']['web_console_ssl_port'] = 15_671
 
 # tcp listen options
+default['rabbitmq']['tcp_listen'] = true
 default['rabbitmq']['tcp_listen_packet'] = 'raw'
 default['rabbitmq']['tcp_listen_reuseaddr']  = true
 default['rabbitmq']['tcp_listen_backlog'] = 128
@@ -72,22 +82,26 @@ default['rabbitmq']['disabled_virtualhosts'] = []
 # users
 default['rabbitmq']['enabled_users'] =
   [{ :name => 'guest', :password => 'guest', :rights =>
-    [{ :vhost => nil , :conf => '.*', :write => '.*', :read => '.*' }]
+    [{ :vhost => nil, :conf => '.*', :write => '.*', :read => '.*' }]
   }]
 default['rabbitmq']['disabled_users'] = []
 
 # plugins
 default['rabbitmq']['enabled_plugins'] = []
 default['rabbitmq']['disabled_plugins'] = []
+default['rabbitmq']['community_plugins'] = nil
 
 # platform specific settings
 case node['platform_family']
 when 'smartos'
   default['rabbitmq']['service_name'] = 'rabbitmq'
   default['rabbitmq']['config_root'] = '/opt/local/etc/rabbitmq'
-  default['rabbitmq']['config'] = '/opt/local/etc/rabbitmq/rabbitmq'
+  default['rabbitmq']['config'] = "#{node['rabbitmq']['config_root']}/rabbitmq"
   default['rabbitmq']['erlang_cookie_path'] = '/var/db/rabbitmq/.erlang.cookie'
 end
+
+# heartbeat
+default['rabbitmq']['heartbeat'] = 580
 
 # Example HA policies
 default['rabbitmq']['policies']['ha-all']['pattern'] = '^(?!amq\\.).*'
@@ -99,3 +113,6 @@ default['rabbitmq']['policies']['ha-two']['params'] = { 'ha-mode' => 'exactly', 
 default['rabbitmq']['policies']['ha-two']['priority'] = 1
 
 default['rabbitmq']['disabled_policies'] = []
+
+# conf
+default['rabbitmq']['conf'] = {}
