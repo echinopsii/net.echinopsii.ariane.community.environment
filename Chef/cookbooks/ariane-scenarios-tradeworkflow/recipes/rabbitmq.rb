@@ -13,6 +13,7 @@ node.set['rabbitmq']['cluster'] = true
 node.set['rabbitmq']['erlang_cookie'] = 'ariane-community-scenarios-tradeflow-rabbitmq-cluster'
 node.default['rabbitmq']['kernel']['inet_dist_listen_min'] = 44001
 node.default['rabbitmq']['kernel']['inet_dist_listen_max'] = 44001
+node.default['rabbitmq']['loopback_users'] = []
 
 include_recipe 'rabbitmq'
 include_recipe 'rabbitmq::plugin_management'
