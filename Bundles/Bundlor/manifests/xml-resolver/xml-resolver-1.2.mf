@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.xml-resolver.xml-resolver
-Bundle-Name: net.echinopsii.3rdparty.xml-resolver.xml-resolver
-Bundle-Vendor: xml-resolver (source) / echinopsii (bundle)
-Bundle-Version: 1.2.0

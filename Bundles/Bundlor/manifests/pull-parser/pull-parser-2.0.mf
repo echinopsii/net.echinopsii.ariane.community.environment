@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.pull-parser
-Bundle-Name: net.echinopsii.3rdparty.pull-parser
-Bundle-Vendor: pull-parser (source) / echinopsii (bundle)
-Bundle-Version: 2.0.0

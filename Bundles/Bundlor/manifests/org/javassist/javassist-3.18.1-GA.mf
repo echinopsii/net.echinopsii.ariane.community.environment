@@ -1,6 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.javassist.javassist
-Bundle-Name: net.echinopsii.3rdparty.org.javassist.javassist
-Bundle-Vendor: org.javassist (source) / echinopsii (bundle)
-Bundle-Version: 3.18.1
-Fragment-Host: org.apache.catalina;bundle-version="[7.0.35, 7.0.36)"

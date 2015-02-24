@@ -1,7 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.xerces.xercesImpl
-Bundle-Name: net.echinopsii.3rdparty.xerces.xercesImpl
-Bundle-Vendor: Apache (source) / echinopsii (bundle)
-Bundle-Version: 2.8.0
-Import-Template:
- org.apache.xml.resolver*;version="[1.1,2)"

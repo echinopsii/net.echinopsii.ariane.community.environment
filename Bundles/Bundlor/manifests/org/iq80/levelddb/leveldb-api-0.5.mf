@@ -1,6 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.iq80.leveldb.leveldb-api
-Bundle-Name: net.echinopsii.3rdparty.org.iq80.leveldb.leveldb-api
-Bundle-Vendor: iq80 (orginal package) / echinopsii (bundle)
-Bundle-Description: iq80 leveldb
-Bundle-Version: 0.5.0

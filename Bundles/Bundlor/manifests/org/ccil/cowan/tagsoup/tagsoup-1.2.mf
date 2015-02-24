@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.ccil.tagsoup.tagsoup
-Bundle-Name: net.echinopsii.3rdparty.org.ccil.tagsoup.tagsoup
-Bundle-Vendor: org.ccil (source) / echinopsii (bundle)
-Bundle-Version: 1.2

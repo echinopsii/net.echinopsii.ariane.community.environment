@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-util
-Bundle-Name: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-util
-Bundle-Vendor: org.openrdf (source) / echinopsii (bundle)
-Bundle-Version: 2.6.10

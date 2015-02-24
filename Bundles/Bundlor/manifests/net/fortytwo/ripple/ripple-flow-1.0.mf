@@ -1,7 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow
-Bundle-Name: net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow
-Bundle-Vendor: net.fortytwo (source) / echinopsii (bundle)
-Bundle-Version: 1.0
-Import-Template:
-  net.fortytwo.ripple;version="1.0"

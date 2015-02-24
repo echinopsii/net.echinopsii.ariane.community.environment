@@ -1,9 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.codehaus.janino.janino
-Bundle-Name: net.echinopsii.3rdparty.org.codehaus.janino.janino
-Bundle-Vendor: codehaus (source) / echinopsii (bundle)
-Bundle-Version: 2.6.1
-Import-Template:
-  org.apache.tools.ant.*,
-  org.codehaus.commons.compiler
-

@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-graph-sail
-Bundle-Name: net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-graph-sail
-Bundle-Vendor: Tinkerpop (source) / echinopsii (bundle).
-Bundle-Version: 2.5.1

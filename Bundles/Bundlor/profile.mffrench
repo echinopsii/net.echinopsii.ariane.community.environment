@@ -1,5 +1,0 @@
-#!/bin/bash
-ExpVar() { _N="$1"; eval "$_N="\"$2\"; eval export "$_N";}
-
-ExpVar BUNDLOR_HOME `pwd`/lib/bundlor-1.1.2.RELEASE
-

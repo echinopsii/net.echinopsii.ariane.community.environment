@@ -1,8 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-memory
-Bundle-Name: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-memory
-Bundle-Vendor: org.openrdf (source) / echinopsii (bundle)
-Bundle-Version: 2.6.10
-Import-Template:
-  info.aduna*;version="2.6.10",
-  org.openrdf*;version="2.6.10"  

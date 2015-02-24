@@ -1,9 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.com.typesafe.scalalogging-slf4j_2.10
-Bundle-Name: net.echinopsii.3rdparty.com.typesafe.scalaloggin-slf4j_2.10
-Bundle-Vendor: Typesafe (source) / echinopsii (bundle)
-Bundle-Description: Scala logging SLF4J
-Bundle-Version: 1.1.0
-Import-Template:
- org.slf4j;version="1.7.2",
- scala*;version="[2.10.0,2.11.0)" 

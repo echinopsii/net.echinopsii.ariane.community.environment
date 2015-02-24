@@ -1,8 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.net.fortytwo.sesametools.common
-Bundle-Name: net.echinopsii.3rdparty.net.fortytwo.sesametools.common
-Bundle-Vendor: net.fortytwo (source) / echinopsii (bundle)
-Bundle-Version: 1.7
-Import-Template:
-  info.aduna*;version="2.6.10",
-  org.openrdf*;version="2.6.10"

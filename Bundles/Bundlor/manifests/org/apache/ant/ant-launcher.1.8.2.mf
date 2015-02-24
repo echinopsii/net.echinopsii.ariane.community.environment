@@ -1,5 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.apache.ant-launcher
-Bundle-Name: net.echinopsii.3rdparty.org.apache.ant-launcher
-Bundle-Vendor: org.apache (source) / echinopsii (bundle)
-Bundle-Version: 1.8.2

@@ -1,7 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.colt
-Bundle-Name: net.echinopsii.3rdparty.colt
-Bundle-Vendor: colt (source) / echinopsii (bundle)
-Bundle-Version: 1.2.0
-Import-Package:
- EDU.oswego.cs.dl.util.concurrent;version="[1.3,1.4)" 

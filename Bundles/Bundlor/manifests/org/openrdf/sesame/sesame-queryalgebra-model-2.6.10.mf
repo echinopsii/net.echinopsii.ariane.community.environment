@@ -1,7 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-model
-Bundle-Name: net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-model
-Bundle-Vendor: org.openrdf (source) / echinopsii (bundle)
-Bundle-Version: 2.6.10
-Import-Template:
-  org.openrdf*;version="2.6.10"  

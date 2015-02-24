@@ -1,9 +1,0 @@
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: net.echinopsii.3rdparty.org.dom4j
-Bundle-Name: net.echinopsii.3rdparty.org.dom4j
-Bundle-Vendor: org.dom4j (source) / echinopsii (bundle)
-Bundle-Version: 1.6.2
-Import-Template:
- org.gjt.xpp;version="[2.0,3)",
- org.jaxen*;version="[1.1,2)",
- org.relaxng.datatype;version="[1.0,2)"
