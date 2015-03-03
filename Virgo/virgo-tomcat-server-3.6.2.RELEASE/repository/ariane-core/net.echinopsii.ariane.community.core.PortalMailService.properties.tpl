@@ -1,4 +1,4 @@
-net.echinopsii.ariane.community.core.PortalMailService.path=%%VIRGO_HOME/repository/ariane-core/net.echinopsii.ariane.core.PortalMailService.properties
+net.echinopsii.ariane.community.core.PortalMailService.path=%%VIRGO_HOME/repository/ariane-core/net.echinopsii.ariane.community.core.PortalMailService.properties
 
 mail.user=mymail@gmail.com
 mail.password=mypassword
