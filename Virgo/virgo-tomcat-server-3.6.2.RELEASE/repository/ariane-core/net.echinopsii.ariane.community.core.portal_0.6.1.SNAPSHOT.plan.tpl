@@ -4,6 +4,7 @@
 				xsi:schemaLocation="
 				        http://www.eclipse.org/virgo/schema/plan 
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.PortalMailService"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.base/0.6.1-SNAPSHOT/net.echinopsii.ariane.community.core.portal.base-0.6.1-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.wat/0.6.1-SNAPSHOT/net.echinopsii.ariane.community.core.portal.wat-0.6.1-SNAPSHOT.jar"/>
 	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.idmwat/0.6.1-SNAPSHOT/net.echinopsii.ariane.community.core.portal.idmwat-0.6.1-SNAPSHOT.jar"/>
