@@ -1,6 +1,6 @@
 {
   "name": "rabbitmq",
-  "version": "3.10.0",
+  "version": "3.11.0",
   "description": "Installs and configures RabbitMQ server",
   "long_description": "",
   "maintainer": "Chef, Inc.",
