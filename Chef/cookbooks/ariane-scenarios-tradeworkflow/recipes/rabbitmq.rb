@@ -20,7 +20,7 @@ include_recipe 'rabbitmq::plugin_management'
 include_recipe 'rabbitmq::user_management'
 
 rabbitmq_user "admin" do
-  password "admin"
+  password "sekret"
   action :add
 end
 
