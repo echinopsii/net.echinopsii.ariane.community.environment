@@ -1,10 +1,10 @@
 {
   "name": "erlang",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Installs erlang, optionally install GUI tools.",
   "long_description": "",
-  "maintainer": "Opscode, Inc.",
-  "maintainer_email": "cookbooks@opscode.com",
+  "maintainer": "Chef Software, Inc.",
+  "maintainer_email": "cookbooks@chef.io",
   "license": "Apache 2.0",
   "platforms": {
     "ubuntu": ">= 0.0.0",
