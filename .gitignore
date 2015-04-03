@@ -26,3 +26,4 @@ Chef/.chef
 Virgo/virgo-kernel-3.6.3.RELEASE/configuration/hostkey.ser
 Virgo/virgo-kernel-3.6.3.RELEASE/serviceability/
 Virgo/virgo-kernel-3.6.3.RELEASE/work/
+Virgo/virgo-kernel-3.6.3.RELEASE/neo4j/*/**
