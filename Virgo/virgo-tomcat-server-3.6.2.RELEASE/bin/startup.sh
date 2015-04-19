@@ -26,4 +26,4 @@ case "$(uname)" in
 esac
 export cygwin
 
-exec "$SCRIPT_DIR"/"$EXECUTABLE" start "$@"
+exec "$SCRIPT_DIR"/"$EXECUTABLE" start "$@" &
