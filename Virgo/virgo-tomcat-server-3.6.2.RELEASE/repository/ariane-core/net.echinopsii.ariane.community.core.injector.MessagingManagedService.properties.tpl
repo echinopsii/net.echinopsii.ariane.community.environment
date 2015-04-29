@@ -1,0 +1,10 @@
+mom_cli.impl=net.echinopsii.ariane.community.core.messaging.rabbitmq.Client
+mom_cli.rabbitmq.product=Ariane
+mom_cli.rabbitmq.information=Ariane Remote Injector Messaging Service
+mom_cli.rabbitmq.copyright=AGPLv3
+mom_cli.rabbitmq.version=0.6.2-SNAPSHOT
+mom_host.fqdn=rbmq-pool01.lab01.dev
+mom_host.port=5672
+mom_host.user=ariane
+mom_host.password=password
+mom_host.rbq_vhost=/ariane
