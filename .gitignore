@@ -19,6 +19,10 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.in
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/infinispan.injector.gears.cache.xml
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.components.cache.dat
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/core/injector/ariane.community.core.injector.shared.gears.cache.dat
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/plugins/rabbitmq/ariane.community.plugin.rabbitmq.components.cache.dat
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/plugins/rabbitmq/ariane.community.plugin.rabbitmq.gears.cache.dat
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/plugins/rabbitmq/infinispan.components.cache.xml
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/cache/plugins/rabbitmq/infinispan.gears.cache.xml
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context.xml.default
 Chef/.chef/*.pem
 Chef/.chef/encrypted_data_bag_secret
