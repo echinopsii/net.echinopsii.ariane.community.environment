@@ -31,3 +31,4 @@ Virgo/virgo-kernel-3.6.3.RELEASE/configuration/hostkey.ser
 Virgo/virgo-kernel-3.6.3.RELEASE/serviceability/
 Virgo/virgo-kernel-3.6.3.RELEASE/work/
 Virgo/virgo-kernel-3.6.3.RELEASE/neo4j/*/**
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context.xml.default
