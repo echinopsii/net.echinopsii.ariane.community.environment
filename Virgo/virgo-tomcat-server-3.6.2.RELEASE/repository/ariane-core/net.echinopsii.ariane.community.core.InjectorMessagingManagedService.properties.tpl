@@ -1,4 +1,4 @@
-mom_cli.impl=net.echinopsii.ariane.community.core.messaging.rabbitmq.Client
+mom_cli.impl=net.echinopsii.ariane.community.messaging.rabbitmq.Client
 mom_cli.rabbitmq.product=Ariane
 mom_cli.rabbitmq.information=Ariane Remote Injector Messaging Service
 mom_cli.rabbitmq.copyright=AGPLv3
