@@ -33,7 +33,7 @@ rm -rf $KERNEL_HOME/ariane/static/fonts/*
 rm -rf $KERNEL_HOME/ariane/static/images/*
 rm -rf $KERNEL_HOME/ariane/static/js/*
 
-cp -R $ARIANE_HOME/ariane.community.core.portal/wresources/ariane/static/ $KERNEL_HOME/ariane/static/
+cp -R $ARIANE_HOME/ariane.community.core.portal/wresources/ariane/static/* $KERNEL_HOME/ariane/static/
 cp -R $ARIANE_HOME/ariane.community.core.mapping/taitale/src/main/webapp/ariane/static/* $KERNEL_HOME/ariane/static/
 
 ls $ARIANE_HOME/ariane.community.core.mapping/taitale/target/*jar > /dev/null 2>&1
