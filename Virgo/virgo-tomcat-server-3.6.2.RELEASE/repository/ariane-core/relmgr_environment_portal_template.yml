@@ -1,0 +1,12 @@
+<plan name="net.echinopsii.ariane.community.core.portal" version="{{version_point}}" scoped="false" atomic="false"
+                xmlns="http://www.eclipse.org/virgo/schema/plan"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="
+				        http://www.eclipse.org/virgo/schema/plan 
+				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.PortalMailService"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.base/{{version}}/net.echinopsii.ariane.community.core.portal.base-{{version}}.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.wat/{{version}}/net.echinopsii.ariane.community.core.portal.wat-{{version}}.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.idmwat/{{version}}/net.echinopsii.ariane.community.core.portal.idmwat-{{version}}.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/portal/net.echinopsii.ariane.community.core.portal.wab/{{version}}/net.echinopsii.ariane.community.core.portal.wab-{{version}}.war"/>
+</plan>

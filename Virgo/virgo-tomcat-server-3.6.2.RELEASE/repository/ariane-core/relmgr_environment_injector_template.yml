@@ -1,0 +1,14 @@
+<plan name="net.echinopsii.ariane.community.core.injector" version="{{version_point}}" scoped="false" atomic="false"
+                xmlns="http://www.eclipse.org/virgo/schema/plan"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="
+				        http://www.eclipse.org/virgo/schema/plan
+				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.InjectorComponentsRegistry"/>
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.InjectorGearsRegistry"/>
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.InjectorRegistryFactory"/>
+	<artifact type="configuration" name="net.echinopsii.ariane.community.core.InjectorMessagingManagedService"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.base/{{version}}/net.echinopsii.ariane.community.core.injector.base-{{version}}.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.messaging/{{version}}/net.echinopsii.ariane.community.core.injector.messaging-{{version}}.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/injector/net.echinopsii.ariane.community.core.injector.wat/{{version}}/net.echinopsii.ariane.community.core.injector.wat-{{version}}.jar"/>
+</plan>
