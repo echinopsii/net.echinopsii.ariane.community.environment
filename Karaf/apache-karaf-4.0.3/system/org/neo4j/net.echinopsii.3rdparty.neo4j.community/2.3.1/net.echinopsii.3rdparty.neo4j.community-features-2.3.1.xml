@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="net.echinopsii.3rdparty.neo4j.community" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+    <feature name="neo4j.community-log" description="Provide Neo4j DB log support" version="2.3.1">
+        <bundle dependency="true" start-level="31">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+	<bundle start-level="31">mvn:ch.qos.logback/logback-core/1.1.2</bundle>
+	<bundle start-level="31">mvn:ch.qos.logback/logback-classic/1.1.2</bundle>
+        <bundle start-level="31">mvn:ch.qos.logback/net.echinopsii.3rdparty.logback-access/1.1.2</bundle>
+	<bundle start-level="31">mvn:org.slf4j/slf4j-api/1.7.6</bundle>
+    </feature>
+
+    <feature name="neo4j.community-scala" description="Provide Neo4j DB scala support" version="2.3.1">
+	<bundle start-level="32">mvn:org.parboiled/net.echinopsii.3rdparty.parboiled-core/1.1.7</bundle>
+	<bundle start-level="32">mvn:org.parboiled/net.echinopsii.3rdparty.parboiled-scala_2.11/1.1.7</bundle>
+	<bundle start-level="32">mvn:org.scala-lang/scala-library/2.11.7</bundle>
+	<bundle start-level="32">mvn:org.scala-lang.modules/scala-parser-combinators_2.11/1.0.4</bundle>
+	<bundle start-level="32">mvn:org.scala-lang/scala-reflect/2.11.7</bundle>
+    </feature>
+
+    <feature name="neo4j.community-misc" description="Provide Neo4j DB misc tooling" version="2.3.1">
+	<bundle start-level="33">mvn:org.ow2.asm/asm/5.0.2</bundle>
+	<bundle start-level="33">mvn:org.bouncycastle/bcpkix-jdk15on/1.52</bundle>
+	<bundle start-level="33">mvn:org.bouncycastle/bcprov-jdk15on/1.52</bundle>
+	<bundle start-level="33">mvn:commons-beanutils/commons-beanutils/1.8.3</bundle>
+	<bundle start-level="33">mvn:commons-collections/commons-collections/3.2.1</bundle>
+	<bundle start-level="33">mvn:commons-configuration/commons-configuration/1.10</bundle>
+	<bundle start-level="33">mvn:commons-digester/commons-digester/2.1</bundle>
+	<bundle start-level="33">mvn:commons-io/commons-io/2.4</bundle>
+	<bundle start-level="33">mvn:org.apache.commons/commons-lang3/3.3.2</bundle>
+	<bundle start-level="33">mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle start-level="33">mvn:org.jvnet.mimepull/mimepull/1.9.3</bundle>
+	<bundle start-level="33">mvn:jline/jline/2.12</bundle>
+	<bundle start-level="33">mvn:com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4.2</bundle>
+	<bundle dependency="true" start-level="33">mvn:javax.ws.rs/jsr311-api/1.1.1</bundle>
+	<bundle start-level="33">mvn:org.codehaus.jackson/jackson-core-asl/1.9.13</bundle>
+	<bundle start-level="33">mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
+	<bundle start-level="33">mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
+	<bundle start-level="33">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.lucene/3.6.2_1</bundle>
+        <bundle start-level="33">mvn:net.sf/net.echinopsii.3rdparty.net.sf.opencsv/2.3.0</bundle>
+	<bundle start-level="33">mvn:io.netty/net.echinopsii.3rdparty.netty-all/4.0.28</bundle>
+	<bundle start-level="33">mvn:org.apache/net.echinopsii.3rdparty.org.apache.ant/1.8.2</bundle>
+	<bundle start-level="33">mvn:org.apache/net.echinopsii.3rdparty.org.apache.ant-launcher/1.8.2</bundle>
+	<bundle start-level="33">mvn:org.mozilla/net.echinopsii.3rdparty.org.mozilla.rhino/1.7.4</bundle>
+	<bundle start-level="33">mvn:org.rrd4j/net.echinopsii.3rdparty.org.rrd4j.rrd4j/2.2.0</bundle>
+    </feature>
+
+    <feature name="neo4j.community-jetty" description="Provide Neo4J DB Web support" version="2.3.1">
+	<bundle dependency="true" start-level="31">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+        <bundle dependency="true" start-level="34">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.5.0</bundle>
+        <bundle dependency="true" start-level="34">mvn:javax.mail/mail/1.4.4</bundle>
+        <bundle dependency="true" start-level="34">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+	<bundle dependency="true" start-level="34">mvn:javax.annotation/javax.annotation-api/1.2</bundle>
+        <bundle dependency="true" start-level="34">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-http/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-io/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-security/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-server/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-servlet/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-util/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-webapp/9.2.4.v20141103</bundle>
+        <bundle start-level="34">mvn:org.eclipse.jetty/jetty-xml/9.2.4.v20141103</bundle>
+    </feature>
+
+    <feature name="neo4j.community-server" description="Provide Neo4J DB server" version="2.3.1">
+	<bundle start-level="35">mvn:org.neo4j/net.echinopsii.3rdparty.org.neo4j.community.superbundle/2.3.1</bundle>
+    </feature>
+
+<!--
+    <feature name="neo4j.community-demo" description="Provide Neo4J DB demo" version="2.3.1">
+	<bundle start-level="36">
+    </feature>
+-->
+
+</features>
