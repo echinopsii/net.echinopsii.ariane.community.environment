@@ -18,7 +18,7 @@
     </feature>
 
     <feature name="neo4j.community-misc" description="Provide Neo4j DB misc tooling" version="2.3.1">
-	<bundle dependency="true" start-level="33">mvn:org.ow2.asm/asm/5.0.2</bundle>
+	<!--<bundle dependency="true" start-level="33">mvn:org.ow2.asm/asm/5.0.2</bundle>-->
 	<bundle dependency="true" start-level="33">mvn:org.bouncycastle/bcpkix-jdk15on/1.52</bundle>
 	<bundle dependency="true" start-level="33">mvn:org.bouncycastle/bcprov-jdk15on/1.52</bundle>
 	<bundle dependency="true" start-level="33">mvn:commons-beanutils/commons-beanutils/1.8.3</bundle>
@@ -62,13 +62,10 @@
     </feature>
 
     <feature name="neo4j.community-server" description="Provide Neo4J DB server" version="2.3.1">
+	<feature>neo4j.community-log</feature>
+	<feature>neo4j.community-scala</feature>
+        <feature>neo4j.community-misc</feature>
+        <feature>neo4j.community-jetty</feature>
 	<bundle start-level="35">mvn:org.neo4j/net.echinopsii.3rdparty.org.neo4j.community.superbundle/2.3.1</bundle>
     </feature>
-
-<!--
-    <feature name="neo4j.community-demo" description="Provide Neo4J DB demo" version="2.3.1">
-	<bundle start-level="36">
-    </feature>
--->
-
 </features>
