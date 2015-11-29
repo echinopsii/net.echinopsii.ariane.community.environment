@@ -34,3 +34,15 @@ Virgo/virgo-kernel-3.6.3.RELEASE/serviceability/
 Virgo/virgo-kernel-3.6.3.RELEASE/work/
 Virgo/virgo-kernel-3.6.3.RELEASE/neo4j/*/**
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context.xml.default
+Karaf/apache-karaf-4.0.3/data/tmp/*
+Karaf/apache-karaf-4.0.3/data/cache/
+Karaf/apache-karaf-4.0.3/data/dbms/
+Karaf/apache-karaf-4.0.3/data/log/
+Karaf/apache-karaf-4.0.3/data/port
+Karaf/apache-karaf-4.0.3/data/security/
+Karaf/apache-karaf-4.0.3/deploy/*
+Karaf/apache-karaf-4.0.3/etc/host.key
+Karaf/apache-karaf-4.0.3/etc/net.echinopsii.demo.*.cfg
+Karaf/apache-karaf-4.0.3/instances/
+Karaf/apache-karaf-4.0.3/lock
+Karaf/apache-karaf-4.0.3/neo4j-home/
