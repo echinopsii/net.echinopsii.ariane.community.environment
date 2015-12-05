@@ -46,3 +46,5 @@ Karaf/apache-karaf-4.0.3/etc/net.echinopsii.demo.*.cfg
 Karaf/apache-karaf-4.0.3/instances/
 Karaf/apache-karaf-4.0.3/lock
 Karaf/apache-karaf-4.0.3/neo4j-home/
+Karaf/apache-karaf-4.0.3/ariane/neo4j/conf/ssl/
+Karaf/apache-karaf-4.0.3/ariane/neo4j/data/
