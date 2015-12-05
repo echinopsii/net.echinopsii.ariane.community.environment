@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="net.echinopsii.3rdparty.neo4j.community" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+	<feature name="tinkerpop-groovy" description="Provide Tinkerpop Groovy language" version="2.6.231">
+		<bundle dependency="true" start-level="41">mvn:antlr/net.echinopsii.3rdparty.antlr/2.7.7</bundle>
+		<bundle dependency="true" start-level="41">mvn:org.codehaus.groovy/groovy/1.8.9</bundle>
+	</feature>
+
+	<feature name="tinkerpop-misc" description="Provide Tinkerpop misc tooling" version="2.6.231">
+		<bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-model/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-query/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-evaluation/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryalgebra-model/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryparser-api/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryparser-sparql/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryresultio-api/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-queryresultio-sparqlxml/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-repository-api/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-repository-sparql/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-rio-api/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-api/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-inferencer/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-memory/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-sail-nativerdf/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.openrdf.sesame/net.echinopsii.3rdparty.org.openrdf.sesame.sesame-util/2.7.10</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.linked-data-sail/1.1</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-base/1.1</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow/1.1</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.ripple.ripple-flow-rdf/1.1</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.sesametools.common/1.8</bundle>
+                <bundle dependency="true" start-level="42">mvn:net.fortytwo/net.echinopsii.3rdparty.net.fortytwo.sesametools.repository-sail/1.8</bundle>
+                <bundle dependency="true" start-level="42">mvn:com.fasterxml.jackson.core/jackson-annotations/2.2.3</bundle>
+                <bundle dependency="true" start-level="42">mvn:com.fasterxml.jackson.core/jackson-core/2.2.3</bundle>
+                <bundle dependency="true" start-level="42">mvn:com.fasterxml.jackson.core/net.echinopsii.3rdparty.com.fasterxml.jackson.core.jackson-databind/2.2.3</bundle>
+                <bundle dependency="true" start-level="42">mvn:org.codehaus.jettison/jettison/1.3.3</bundle>
+                <bundle dependency="true" start-level="42">mvn:jline/jline/1.0</bundle>
+                <bundle dependency="true" start-level="42">mvn:colt/net.echinopsii.3rdparty.colt/1.2.0</bundle>
+                <bundle dependency="true" start-level="42">mvn:com.carrotsearch/net.echinopsii.3rdparty.com.carrotsearch.hppc/0.6.0</bundle>
+                <bundle dependency="true" start-level="42">mvn:concurrent/net.echinopsii.3rdparty.concurrent/1.3.4</bundle>
+                <bundle dependency="true" start-level="42">mvn:stax/net.echinopsii.3rdparty.stax.stax-api/1.0.1</bundle>
+        </feature>
+
+        <feature name="tinkerpop-pipes" description="Provide Tinkerpop Pipes support" version="2.6.231">
+		<bundle start-level="43">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.pipes/2.6.231</bundle>
+        </feature>
+
+        <feature name="tinkerpop-blueprints" description="Provide Tinkerpop Blueprints support" version="2.6.231">
+                <bundle start-level="44">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-core/2.6.231</bundle>
+                <bundle start-level="44">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-graph-sail/2.6.231</bundle>
+                <bundle start-level="44">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-sail-graph/2.6.231</bundle>
+                <bundle start-level="44">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.blueprints.blueprints-neo4j2-graph/2.6.231</bundle>
+        </feature>
+
+        <feature name="tinkerpop-gremlin" description="Provide Tinkerpop Gremlin support" version="2.6.231">
+		<bundle start-level="45">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-java/2.6.231</bundle>
+		<bundle start-level="45">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-groovy/2.6.231</bundle>
+        </feature>
+
+</features>
