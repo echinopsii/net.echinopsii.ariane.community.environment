@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="net.echinopsii.3rdparty.com.typesafe.akka" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+	<feature name="typesafe.akka-scala" description="Provide Scala for Akka" version="2.3.14">
+		<bundle dependency="true" start-level="31">mvn:org.parboiled/net.echinopsii.3rdparty.parboiled-core/1.1.7</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.parboiled/net.echinopsii.3rdparty.parboiled-scala_2.11/1.1.7</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.scala-lang/scala-library/2.11.7</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.scala-lang.modules/scala-parser-combinators_2.11/1.0.4</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.scala-lang/scala-reflect/2.11.7</bundle>
+	</feature>
+
+	<feature name="typesafe.akka-misc" description="Provide misc tooling for Akka" version="2.3.14">
+                <bundle dependency="true" start-level="32">mvn:com.google.guava/guava/12.0</bundle>
+		<bundle dependency="true" start-level="32">mvn:org.iq80.leveldb/net.echinopsii.3rdparty.org.iq80.leveldb.leveldb-api/0.5.0</bundle>
+		<bundle dependency="true" start-level="32">mvn:org.iq80.leveldb/net.echinopsii.3rdparty.org.iq80.leveldb.leveldb/0.5.0</bundle>
+                <bundle dependency="true" start-level="32">mvn:org.fusesource.leveldbjni/leveldbjni/1.7</bundle>
+                <bundle dependency="true" start-level="32">mvn:org.uncommons.maths/net.echinopsii.3rdparty.org.uncommons.maths.random/1.2.2</bundle>
+                <bundle dependency="true" start-level="32">mvn:com.google.protobuf/protobuf-java/2.5.0</bundle>
+                <bundle dependency="true" start-level="32">mvn:org.jboss.logging/jboss-logging/3.1.3.GA</bundle>
+		<bundle dependency="true" start-level="32">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling/1.3.18</bundle>
+                <bundle dependency="true" start-level="32">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling-river/1.3.18</bundle>
+                <bundle dependency="true" start-level="32">mvn:io.netty/netty/3.8.0.Final</bundle>
+        </feature>
+
+        <feature name="typesafe.akka" description="Provide AKKA support" version="2.3.14">
+                <bundle start-level="33">mvn:com.typesafe/config/1.2.0</bundle>
+                <bundle start-level="33">mvn:com.typesafe.akka/akka-slf4j_2.11/2.3.14</bundle>
+                <bundle start-level="33">mvn:com.typesafe.akka/akka-actor_2.11/2.3.14</bundle>
+                <bundle start-level="33">mvn:com.typesafe.akka/akka-osgi_2.11/2.3.14</bundle>
+		<bundle start-level="33">mvn:com.typesafe.akka/akka-remote_2.11/2.3.14</bundle>
+		<bundle start-level="33">mvn:com.typesafe.akka/akka-cluster_2.11/2.3.14</bundle>
+		<bundle start-level="33">mvn:com.typesafe.akka/akka-persistence-experimental_2.11/2.3.14</bundle>
+        </feature>
+
+</features>

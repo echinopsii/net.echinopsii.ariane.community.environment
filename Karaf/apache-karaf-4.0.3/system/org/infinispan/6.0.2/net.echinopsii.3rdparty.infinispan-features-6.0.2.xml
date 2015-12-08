@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="net.echinopsii.3rdparty.org.infinispan" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+	<feature name="org.infinispan-misc" description="Provide misc tooling for Infinispan" version="6.0.2">
+		<bundle dependency="true" start-level="31">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling/1.3.18</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling-river/1.3.18</bundle>
+		<bundle dependency="true" start-level="31">mvn:org.jgroups/jgroups/3.4.1.Final</bundle>
+	</feature>
+
+	<feature name="org.infinispan" description="Provide Infinispan support" version="6.0.2">
+                <bundle start-level="32">mvn:org.infinispan/net.echinopsii.3rdparty.org.infinispan.commons/6.0.2.Final</bundle>
+		<bundle start-level="32">mvn:org.infinispan/net.echinopsii.3rdparty.org.infinispan.core/6.0.2.Final</bundle>
+        </feature>
+</features>
