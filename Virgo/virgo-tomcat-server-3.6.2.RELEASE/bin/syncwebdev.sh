@@ -46,6 +46,8 @@ fi
 
 cp -R $ARIANE_HOME/ariane.community.core.mapping/taitale/src/main/webapp/ariane/static/* $KERNEL_HOME/ariane/static/
 
+cp -R $ARIANE_HOME/ariane.community.core.mapping/wresources/src/main/webapp/ariane/static/* $KERNEL_HOME/ariane/static/
+
 ls $ARIANE_HOME/ariane.community.core.mapping/taitale/target/*jar > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	rm $ARIANE_HOME/ariane.community.core.mapping/taitale/target/*jar
