@@ -2,6 +2,7 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/static/css/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/static/fonts/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/static/images/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/static/js/
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/static/html/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/ariane-core/net.echinopsii.ariane.community.core.*.plan
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/ariane-core/net.echinopsii.ariane.community.core.*.properties
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/ariane-core/net.echinopsii.ariane.community.*.plan
@@ -10,6 +11,7 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/ariane-plugins/net.echinopsii
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/ariane-plugins/net.echinopsii.ariane.community.plugin.*.properties
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/serviceability/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/work/
+Virgo/virgo-tomcat-server-3.6.2.RELEASE/bin/setenv.sh
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/data/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/ariane/neo4j/graph/
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/repository/usr/
@@ -29,10 +31,6 @@ Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context
 Chef/.chef/*.pem
 Chef/.chef/encrypted_data_bag_secret
 Chef/.chef
-Virgo/virgo-kernel-3.6.3.RELEASE/configuration/hostkey.ser
-Virgo/virgo-kernel-3.6.3.RELEASE/serviceability/
-Virgo/virgo-kernel-3.6.3.RELEASE/work/
-Virgo/virgo-kernel-3.6.3.RELEASE/neo4j/*/**
 Virgo/virgo-tomcat-server-3.6.2.RELEASE/configuration/Catalina/localhost/context.xml.default
 Karaf/apache-karaf-4.0.3/data/tmp/*
 Karaf/apache-karaf-4.0.3/data/cache/
