@@ -195,39 +195,39 @@ then
                     -XX:MaxPermSize=1024m"
 
 	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
-	for infile in `ls $CORE_REPO_HOME | grep plan.tpl`
+	for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
 	do
 	    outfile=`echo $infile | sed "s/.tpl//g"`
-	    sed "s#%%USERHOME#$HOME#g" $CORE_REPO_HOME/$infile > $CORE_REPO_HOME/$outfile
+	    sed "s#%%USERHOME#$HOME#g" $infile > $outfile
 	done
 
-	for infile in `ls $CORE_REPO_HOME | grep properties.tpl`
+	for infile in `find $CORE_REPO_HOME -name "*properties.tpl"`
 	do
 	    outfile=`echo $infile | sed "s/.tpl//g"`
 
-	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $CORE_REPO_HOME/$infile > $CORE_REPO_HOME/$outfile
+	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $infile > $outfile
             if [ `uname` == "Darwin" ]; then
-                    sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $CORE_REPO_HOME/$outfile
-                    sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $CORE_REPO_HOME/$outfile
+		     sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+		     sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
 
-                    sed -i .bu "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $CORE_REPO_HOME/$outfile
-                    sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $CORE_REPO_HOME/$outfile
-                    sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $CORE_REPO_HOME/$outfile
+                     sed -i .bu "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+                     sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+		     sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
 
-                    sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $CORE_REPO_HOME/$outfile
-		    rm ${CORE_REPO_HOME}/${outfile}.bu	
+                     sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
+                     rm ${outfile}.bu
 	    else	
-		    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $CORE_REPO_HOME/$outfile
-		    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $CORE_REPO_HOME/$outfile
+		    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+		    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
 
-		    sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $CORE_REPO_HOME/$outfile
-		    sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $CORE_REPO_HOME/$outfile
-		    sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $CORE_REPO_HOME/$outfile
+		    sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+		    sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+		    sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
 
-		    sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $CORE_REPO_HOME/$outfile
+		    sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
 	    fi
 	done
-
+	
 	PLUGIN_REPO_HOME=$KERNEL_HOME/repository/ariane-plugins
 	for infile in `ls $PLUGIN_REPO_HOME | grep plan.tpl`
 	do
