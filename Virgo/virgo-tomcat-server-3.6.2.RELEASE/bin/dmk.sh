@@ -194,7 +194,7 @@ then
                     -Xmx1024m \
                     -XX:MaxPermSize=1024m"
 
-	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core
+	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
 	for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
 	do
 	    outfile=`echo $infile | sed "s/.tpl//g"`
