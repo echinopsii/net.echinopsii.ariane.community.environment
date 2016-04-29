@@ -10,6 +10,7 @@
 	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.7.5-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.dsl-0.7.5-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.7.5-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.blueprints-0.7.5-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.7.5-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.rim-0.7.5-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.reqregistry/0.7.5-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.reqregistry-0.7.5-SNAPSHOT.jar"/>
 	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/0.7.5-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.wat-0.7.5-SNAPSHOT.jar"/>
 
 </plan>

@@ -23,6 +23,8 @@
         </feature>
 
         <feature name="typesafe.akka" description="Provide AKKA support" version="2.3.14">
+		<feature>typesafe.akka-scala</feature>
+		<feature>typesafe.akka-misc</feature>
                 <bundle start-level="33">mvn:com.typesafe/config/1.2.0</bundle>
                 <bundle start-level="33">mvn:com.typesafe.akka/akka-slf4j_2.11/2.3.14</bundle>
                 <bundle start-level="33">mvn:com.typesafe.akka/akka-actor_2.11/2.3.14</bundle>
@@ -31,5 +33,4 @@
 		<bundle start-level="33">mvn:com.typesafe.akka/akka-cluster_2.11/2.3.14</bundle>
 		<bundle start-level="33">mvn:com.typesafe.akka/akka-persistence-experimental_2.11/2.3.14</bundle>
         </feature>
-
 </features>

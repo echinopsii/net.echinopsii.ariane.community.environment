@@ -56,4 +56,12 @@
 		<bundle start-level="45">mvn:com.tinkerpop/net.echinopsii.3rdparty.com.tinkerpop.gremlin.gremlin-groovy/2.6.231</bundle>
         </feature>
 
+	<feature name="tinkerpop" description="Provide Tinkerpop Graph APIs" version="2.6.231">
+		<feature>tinkerpop-groovy</feature>
+		<feature>tinkerpop-misc</feature>
+		<feature>tinkerpop-blueprints</feature>
+		<feature>tinkerpop-pipes</feature>
+		<feature>tinkerpop-gremlin</feature>
+	</feature>
+
 </features>

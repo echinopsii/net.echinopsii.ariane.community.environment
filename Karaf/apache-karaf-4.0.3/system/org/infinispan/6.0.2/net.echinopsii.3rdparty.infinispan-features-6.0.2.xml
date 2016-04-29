@@ -8,6 +8,7 @@
 	</feature>
 
 	<feature name="org.infinispan" description="Provide Infinispan support" version="6.0.2">
+		<feature>org.infinispan-misc</feature>
                 <bundle start-level="32">mvn:org.infinispan/net.echinopsii.3rdparty.org.infinispan.commons/6.0.2.Final</bundle>
 		<bundle start-level="32">mvn:org.infinispan/net.echinopsii.3rdparty.org.infinispan.core/6.0.2.Final</bundle>
         </feature>
