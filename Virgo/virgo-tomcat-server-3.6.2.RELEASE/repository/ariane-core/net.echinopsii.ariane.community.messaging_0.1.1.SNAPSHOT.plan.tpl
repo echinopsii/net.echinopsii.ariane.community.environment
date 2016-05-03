@@ -6,4 +6,5 @@
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/messaging/net.echinopsii.ariane.community.messaging.api/0.1.1-SNAPSHOT/net.echinopsii.ariane.community.messaging.api-0.1.1-SNAPSHOT.jar"/>
 	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/messaging/net.echinopsii.ariane.community.messaging.rabbitmq/0.1.1-SNAPSHOT/net.echinopsii.ariane.community.messaging.rabbitmq-0.1.1-SNAPSHOT.jar"/>
+	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/messaging/net.echinopsii.ariane.community.messaging.nats/0.1.1-SNAPSHOT/net.echinopsii.ariane.community.messaging.nats-0.1.1-SNAPSHOT.jar"/>
 </plan>
