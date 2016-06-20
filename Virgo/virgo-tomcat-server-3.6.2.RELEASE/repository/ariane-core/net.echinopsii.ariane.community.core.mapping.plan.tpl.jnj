@@ -4,12 +4,13 @@
 				xsi:schemaLocation="
 				        http://www.eclipse.org/virgo/schema/plan 
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
-
         <artifact type="configuration" name="net.echinopsii.ariane.community.core.MappingRimManagedService"/>
+        <artifact type="configuration" name="net.echinopsii.ariane.community.core.MappingMsgsrvManagedService"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.api/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.api-{{version}}.jar"/>
-	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.dsl-{{version}}.jar"/>
+		<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.dsl-{{version}}.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.blueprints-{{version}}.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgcli/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.msgcli-{{version}}.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.rim-{{version}}.jar"/>
-	<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/{{version}}/net.echinopsii.ariane.community.core.mapping.wat-{{version}}.jar"/>
-
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgsrv/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.msgsrv-{{version}}.jar"/>
+		<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/{{version}}/net.echinopsii.ariane.community.core.mapping.wat-{{version}}.jar"/>
 </plan>

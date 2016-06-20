@@ -154,6 +154,11 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.msgcli">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
 	<logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.rim">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
