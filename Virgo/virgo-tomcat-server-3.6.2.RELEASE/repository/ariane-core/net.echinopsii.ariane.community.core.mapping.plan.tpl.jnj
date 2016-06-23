@@ -12,5 +12,6 @@
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgcli/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.msgcli-{{version}}.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.rim-{{version}}.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgsrv/{{version}}/net.echinopsii.ariane.community.core.mapping.ds.msgsrv-{{version}}.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.reqregistry/{{version}}/net.echinopsii.ariane.community.core.mapping.reqregistry-{{version}}.jar"/>
 		<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/{{version}}/net.echinopsii.ariane.community.core.mapping.wat-{{version}}.jar"/>
 </plan>

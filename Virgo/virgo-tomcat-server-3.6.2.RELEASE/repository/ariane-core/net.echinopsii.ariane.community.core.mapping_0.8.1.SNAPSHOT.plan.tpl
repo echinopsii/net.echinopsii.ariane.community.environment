@@ -12,5 +12,6 @@
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgcli/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.msgcli-0.8.1-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.rim-0.8.1-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.msgsrv/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.msgsrv-0.8.1-SNAPSHOT.jar"/>
-		<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.wat-0.8.1-SNAPSHOT.jar"/>
+        <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.reqregistry/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.reqregistry-0.8.1-SNAPSHOT.jar"/>
+	    <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/net.echinopsii.ariane.community.core.mapping.wat/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.wat-0.8.1-SNAPSHOT.jar"/>
 </plan>
