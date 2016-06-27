@@ -2,6 +2,8 @@
 <features name="net.echinopsii.3rdparty.org.infinispan" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
 
 	<feature name="org.infinispan-misc" description="Provide misc tooling for Infinispan" version="6.0.2">
+		<feature>transaction-api</feature>
+		<bundle dependency="true" start-level="31">mvn:org.jboss.logging/jboss-logging/3.1.3.GA</bundle>
 		<bundle dependency="true" start-level="31">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling/1.3.18</bundle>
 		<bundle dependency="true" start-level="31">mvn:org.jboss/net.echinopsii.3rdparty.org.jboss.marshalling-river/1.3.18</bundle>
 		<bundle dependency="true" start-level="31">mvn:org.jgroups/jgroups/3.4.1.Final</bundle>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="net.echinopsii.ariane.community.messaging" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+
+    <feature name="ariane.community.messaging-json" description="Provide Ariane Messaging JSON Dependencies" version="0.2.1-SNAPSHOT">
+	<bundle dependency="true" start-level="30">mvn:org.json/net.echinopsii.3rdparty.org.json.json/1.0.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:com.fasterxml.jackson.core/jackson-annotations/2.1.2</bundle>
+        <bundle dependency="true" start-level="30">mvn:com.fasterxml.jackson.core/jackson-core/2.1.2</bundle>
+	<bundle dependency="true" start-level="30">mvn:com.fasterxml.jackson.core/jackson-databind/2.1.2</bundle>
+	<bundle dependency="true" start-level="30">mvn:com.fasterxml.jackson.datatype/jackson-datatype-json-org/2.1.2</bundle>
+    </feature>
+
+    <feature name="ariane.community.messaging-providers" description="Provide Ariane Messaging Provider Dependencies" version="0.2.1-SNAPSHOT">
+        <bundle dependency="true" start-level="31">mvn:com.rabbitmq/amqp-client/3.3.5</bundle>
+	<bundle dependency="true" start-level="31">mvn:io.nats/net.echinopsii.3rdparty.jnats/0.4.1</bundle>
+    </feature>
+
+    <feature name="ariane.community.messaging" description="Provide Ariane Messaging Libraries" version="0.2.1-SNAPSHOT">
+	<feature>ariane.community.messaging-json</feature>
+	<feature>ariane.community.messaging-providers</feature>
+	<bundle dependency="true" start-level="32">mvn:net.echinopsii.ariane.community.messaging/net.echinopsii.ariane.community.messaging.api/0.2.1-SNAPSHOT</bundle>
+	<bundle dependency="true" start-level="32">mvn:net.echinopsii.ariane.community.messaging/net.echinopsii.ariane.community.messaging.nats/0.2.1-SNAPSHOT</bundle>
+	<bundle dependency="true" start-level="32">mvn:net.echinopsii.ariane.community.messaging/net.echinopsii.ariane.community.messaging.rabbitmq/0.2.1-SNAPSHOT</bundle>
+    </feature>
+</features>
