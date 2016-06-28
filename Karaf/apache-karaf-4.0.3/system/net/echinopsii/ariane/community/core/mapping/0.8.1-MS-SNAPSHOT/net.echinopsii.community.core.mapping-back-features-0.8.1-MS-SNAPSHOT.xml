@@ -4,10 +4,10 @@
     <feature name="ariane.community.core.mapping-back" description="Provide Ariane Mapping Back Microservice" version="0.8.1-MS-SNAPSHOT">
 	<configfile finalname="${karaf.etc}/net.echinopsii.ariane.community.core.MappingRimManagedService.cfg" override="true">file:ariane/config/net.echinopsii.ariane.community.core.MappingRimManagedService.cfg</configfile>
         <configfile finalname="${karaf.etc}/net.echinopsii.ariane.community.core.MappingMsgsrvManagedService.cfg" override="true">file:ariane/config/net.echinopsii.ariane.community.core.MappingMsgsrvManagedService.cfg</configfile>
-        <bundle start-level="31">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.api/0.8.1-MS-SNAPSHOT</bundle>
-	<bundle start-level="31">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.8.1-MS-SNAPSHOT</bundle>
-	<bundle start-level="31">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.8.1-MS-SNAPSHOT</bundle>
-	<bundle start-level="31">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.8.1-MS-SNAPSHOT</bundle>
-	<bundle start-level="31">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.msgsrv/0.8.1-MS-SNAPSHOT</bundle>
+        <bundle start-level="60">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.api/0.8.1-MS-SNAPSHOT</bundle>
+	<bundle start-level="60">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.8.1-MS-SNAPSHOT</bundle>
+	<bundle start-level="60">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.8.1-MS-SNAPSHOT</bundle>
+	<bundle start-level="60">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.rim/0.8.1-MS-SNAPSHOT</bundle>
+	<bundle start-level="60">mvn:net.echinopsii.ariane.community.core.mapping.ds/net.echinopsii.ariane.community.core.mapping.ds.msgsrv/0.8.1-MS-SNAPSHOT</bundle>
     </feature>
 </features>
