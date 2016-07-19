@@ -194,38 +194,65 @@ then
                     -Xmx1024m \
                     -XX:MaxPermSize=1024m"
 
+
+
 	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
+	CORE_MAPPING_VERSION=`find $CORE_REPO_HOME -name "net.echinopsii.ariane.community.core.mapping_*tpl" | sed "s/.*_//g" | sed "s/.plan.*//g"`
+
+	if [ "x$DEPLOY" = 'x' ]; then
+		
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-dev_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
+	elif [ "x$DEPLOY" = 'xdev' ]; then
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-dev_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
+                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
+	elif [ "x$DEPLOY" = 'xfrt' ]; then
+ 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-frt_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-frt.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
+                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-frt.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
+	fi
+
 	for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
 	do
-	    outfile=`echo $infile | sed "s/.tpl//g"`
-	    sed "s#%%USERHOME#$HOME#g" $infile > $outfile
+	    infile_frt=`echo $infile | sed "s/-frt//g"`
+	    infile_dev=`echo $infile | sed ""s/-dev//g`
+	    if [[ "$infile" = "$infile_frt" ]] && [[ "$infile" = "$infile_dev" ]]; then
+	            outfile=`echo $infile | sed "s/.tpl//g"`
+        	    sed "s#%%USERHOME#$HOME#g" $infile > $outfile
+	    fi
 	done
 
 	for infile in `find $CORE_REPO_HOME -name "*properties.tpl"`
 	do
-	    outfile=`echo $infile | sed "s/.tpl//g"`
+            infile_frt=`echo $infile | sed "s/-frt//g"`
+            infile_dev=`echo $infile | sed ""s/-dev//g`
+            if [[ "$infile" = "$infile_frt" ]] && [[ "$infile" = "$infile_dev" ]]; then
+	            outfile=`echo $infile | sed "s/.tpl//g"`
+	
+        	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $infile > $outfile
+	            if [ `uname` == "Darwin" ]; then
+        	        sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+                	sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
 
-	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $infile > $outfile
-            if [ `uname` == "Darwin" ]; then
-		     sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
-		     sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
+	                sed -i .bu "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+        	        sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+                	sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
 
-                     sed -i .bu "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
-                     sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
-		     sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
+	                sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
+        	    	rm ${outfile}.bu
+          	    else
+                    	sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+	                sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
 
-                     sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
-                     rm ${outfile}.bu
-	    else	
-		    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
-		    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
+        	        sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+                	sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+	                sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
 
-		    sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
-		    sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
-		    sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
-
-		    sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
-	    fi
+        	        sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
+	            fi
+	    fi	    
 	done
 	
 	PLUGIN_REPO_HOME=$KERNEL_HOME/repository/ariane-plugins
