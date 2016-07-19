@@ -5,7 +5,6 @@
 				        http://www.eclipse.org/virgo/schema/plan 
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
         <artifact type="configuration" name="net.echinopsii.ariane.community.core.MappingRimManagedService"/>
-        <artifact type="configuration" name="net.echinopsii.ariane.community.core.MappingMsgsrvManagedService"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.api/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.api-0.8.1-SNAPSHOT.jar"/>
 		<artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.dsl/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.dsl-0.8.1-SNAPSHOT.jar"/>
         <artifact uri="file:%%USERHOME/.m2/repository/net/echinopsii/ariane/community/core/mapping/ds/net.echinopsii.ariane.community.core.mapping.ds.blueprints/0.8.1-SNAPSHOT/net.echinopsii.ariane.community.core.mapping.ds.blueprints-0.8.1-SNAPSHOT.jar"/>
