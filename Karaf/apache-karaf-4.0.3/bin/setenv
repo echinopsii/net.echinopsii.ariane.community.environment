@@ -36,11 +36,16 @@
 # karaf scripts
 #
 # export JAVA_HOME # Location of Java installation
-# export JAVA_MIN_MEM # Minimum memory for the JVM
-# export JAVA_MAX_MEM # Maximum memory for the JVM
-# export JAVA_PERM_MEM # Minimum perm memory for the JVM
-# export JAVA_MAX_PERM_MEM # Maximum perm memory for the JVM
-# export EXTRA_JAVA_OPTS # Additional JVM options
+JAVA_MIN_MEM=1024M
+export JAVA_MIN_MEM # Minimum memory for the JVM
+JAVA_MAX_MEM=4098M
+export JAVA_MAX_MEM # Maximum memory for the JVM
+JAVA_PERM_MEM=128M
+export JAVA_PERM_MEM # Minimum perm memory for the JVM
+JAVA_MAX_PERM_MEM=512M
+export JAVA_MAX_PERM_MEM # Maximum perm memory for the JVM
+EXTRA_JAVA_OPTS=-XX:+DisableExplicitGC
+export EXTRA_JAVA_OPTS # Additional JVM options
 # export KARAF_HOME # Karaf home folder
 # export KARAF_DATA # Karaf data folder
 # export KARAF_BASE # Karaf base folder
