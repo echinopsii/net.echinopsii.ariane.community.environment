@@ -36,6 +36,12 @@
         <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.dsl">
             <appender-ref ref="LOG_FILE" />
         </logger>
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.sdsl">
+            <appender-ref ref="LOG_FILE" />
+        </logger>
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.mdsl">
+            <appender-ref ref="LOG_FILE" />
+        </logger>
         <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.mapping.ds.rim">
             <appender-ref ref="LOG_FILE" />
         </logger>
