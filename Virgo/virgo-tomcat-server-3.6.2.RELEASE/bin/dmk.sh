@@ -276,7 +276,7 @@ then
 
 	sed "s#%%KERNEL_HOME#$KERNEL_HOME#g" $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default.tpl > $KERNEL_HOME/configuration/Catalina/localhost/context.xml.default
 
-		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
+		cd $KERNEL_HOME; exec -a ariane-srv.${DEPLOY} $JAVA_EXECUTABLE \
 			$JAVA_OPTS \
 			$DEBUG_OPTS \
 			$JMX_OPTS \
