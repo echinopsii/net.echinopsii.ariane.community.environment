@@ -197,21 +197,17 @@ then
 
 
 	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
-	CORE_MAPPING_VERSION=`find $CORE_REPO_HOME -name "net.echinopsii.ariane.community.core.mapping_*tpl" | sed "s/.*_//g" | sed "s/.plan.*//g"`
 
-	if [ "x$DEPLOY" = 'x' ]; then
-		
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-dev_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
-	elif [ "x$DEPLOY" = 'xdev' ]; then
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-dev_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
-                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-dev.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
-	elif [ "x$DEPLOY" = 'xfrt' ]; then
- 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-frt_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-frt.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
-                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-frt.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
+	CORE_MAPPING_VERSION=`find $CORE_REPO_HOME -name "net.echinopsii.ariane.community.core.mapping-mno_*tpl" | sed "s/.*_//g" | sed "s/.plan.*//g"`
+
+	if [[ "x$DEPLOY" = 'xmno' ]] || [[ "x$DEPLOY" = 'xfrt'  ]]; then
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-${DEPLOY}_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-${DEPLOY}.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
+                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-${DEPLOY}.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
+	else
+ 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-mno_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-mno.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
+                cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-mno.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
 	fi
 
 	for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
