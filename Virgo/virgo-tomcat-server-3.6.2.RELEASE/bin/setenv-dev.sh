@@ -10,4 +10,3 @@ DIRECTORY_DB_USER=ariane
 DIRECTORY_DB_PWD=password
 
 DEPLOY=dev
-#DEPLOY=frt
