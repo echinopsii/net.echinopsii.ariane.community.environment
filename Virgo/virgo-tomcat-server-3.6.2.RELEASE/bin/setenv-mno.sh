@@ -9,4 +9,4 @@ DIRECTORY_DB_URL=jdbc:mysql://localhost:3326/ariane_directory
 DIRECTORY_DB_USER=ariane
 DIRECTORY_DB_PWD=password
 
-DEPLOY=dev
+DEPLOY=mno
