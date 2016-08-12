@@ -50,3 +50,8 @@ Karaf/apache-karaf-4.0.3/neo4j-home/
 Karaf/apache-karaf-4.0.3/ariane/neo4j/conf/ssl/
 Karaf/apache-karaf-4.0.3/ariane/neo4j/data/
 Karaf/apache-karaf-4.0.3/etc/net.echinopsii.ariane.*.cfg
+Karaf/apache-karaf-4.0.3/bin/setenv
+Karaf/apache-karaf-4.0.3/etc/log4j2.xml
+Karaf/apache-karaf-4.0.3/etc/org.apache.karaf.features.cfg
+Karaf/apache-karaf-4.0.3/etc/org.apache.karaf.features.repos.cfg
+
