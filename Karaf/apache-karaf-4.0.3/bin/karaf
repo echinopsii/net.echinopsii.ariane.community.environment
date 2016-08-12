@@ -321,6 +321,30 @@ setupDefaults() {
     #DEFAULT_JAVA_DEBUG_OPTS="-Xrunyjpagent"
 }
 
+setupTargetDeployment() {
+	if [ "x$DEPLOY" = "xmms" ]; then
+                if [ ! -f $KARAF_ETC/log4j2.xml ]; then
+                        cp $KARAF_ETC/log4j2.xml.mms $KARAF_ETC/log4j2.xml
+                fi
+                if [ ! -f $KARAF_ETC/org.apache.karaf.features.cfg ]; then
+                        cp $KARAF_ETC/org.apache.karaf.features.cfg.mms $KARAF_ETC/org.apache.karaf.features.cfg
+                fi
+                if [ ! -f $KARAF_ETC/org.apache.karaf.features.repos.cfg ]; then
+                        cp $KARAF_ETC/org.apache.karaf.features.repos.cfg.mms $KARAF_ETC/org.apache.karaf.features.repos.cfg
+                fi		
+	else
+		if [ ! -f $KARAF_ETC/log4j2.xml ]; then
+	                cp $KARAF_ETC/log4j2.xml.karaf $KARAF_ETC/log4j2.xml
+		fi
+		if [ ! -f $KARAF_ETC/org.apache.karaf.features.cfg ]; then
+                	cp $KARAF_ETC/org.apache.karaf.features.cfg.karaf $KARAF_ETC/org.apache.karaf.features.cfg
+		fi
+		if [ ! -f $KARAF_ETC/org.apache.karaf.features.repos.cfg ]; then
+	                cp $KARAF_ETC/org.apache.karaf.features.repos.cfg.karaf $KARAF_ETC/org.apache.karaf.features.repos.cfg
+		fi
+	fi
+}
+
 init() {
     # Determine if there is special OS handling we must perform
     detectOS
@@ -358,6 +382,8 @@ init() {
     # Install debug options
     setupDebugOptions
 
+    # setup target deployment depending on DEPLOY env var
+    setupTargetDeployment
 }
 
 run() {
@@ -417,9 +443,11 @@ run() {
     fi
     cd "$KARAF_BASE"
 
-    exec -a ariane-srv.mms "$JAVA" $JAVA_OPTS -Djava.endorsed.dirs="${JAVA_ENDORSED_DIRS}" -Djava.ext.dirs="${JAVA_EXT_DIRS}" -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.data="$KARAF_DATA" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" -Djava.security.policy=$KARAF_ETC/security.policy -Djava.rmi.server.codebase="file://$KARAF_BASE/system/org/neo4j/net.echinopsii.3rdparty.neo4j.community/2.3.1/net.echinopsii.3rdparty.org.neo4j.community.superbundle-2.3.1.jar" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" $MAIN "$@"
-
-#    exec "$JAVA" $JAVA_OPTS -Djava.endorsed.dirs="${JAVA_ENDORSED_DIRS}" -Djava.ext.dirs="${JAVA_EXT_DIRS}" -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.data="$KARAF_DATA" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" $MAIN "$@"
+    if [ "x$DEPLOY" = "xmms"]; then 
+	    exec -a ariane-srv.${DEPLOY} "$JAVA" $JAVA_OPTS -Djava.endorsed.dirs="${JAVA_ENDORSED_DIRS}" -Djava.ext.dirs="${JAVA_EXT_DIRS}" -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.data="$KARAF_DATA" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" -Djava.security.policy=$KARAF_ETC/security.policy -Djava.rmi.server.codebase="file://$KARAF_BASE/system/org/neo4j/net.echinopsii.3rdparty.neo4j.community/2.3.1/net.echinopsii.3rdparty.org.neo4j.community.superbundle-2.3.1.jar" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" $MAIN "$@"
+    else
+	    exec "$JAVA" $JAVA_OPTS -Djava.endorsed.dirs="${JAVA_ENDORSED_DIRS}" -Djava.ext.dirs="${JAVA_EXT_DIRS}" -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.data="$KARAF_DATA" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" $MAIN "$@"
+    fi
 
 }
 
