@@ -54,3 +54,5 @@ export EXTRA_JAVA_OPTS # Additional JVM options
 # export KARAF_DEBUG # Enable debug mode
 # export KARAF_REDIRECT # Enable/set the std/err redirection when using bin/start
 
+DEPLOY=mms
+export DEPLOY
