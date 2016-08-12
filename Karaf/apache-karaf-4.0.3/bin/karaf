@@ -398,10 +398,9 @@ run() {
                 if [ -f $KARAF_ETC/org.apache.karaf.features.repos.cfg ]; then
                         rm $KARAF_ETC/org.apache.karaf.features.repos.cfg
                 fi
-		echo $KARAF_HOME/ariane/neo4j/data 
-		if [ -d $KARAF_HOME/ariane/neo4j/data ]; then
-			rm -rf $KARAF_HOME/ariane/neo4j/data/*
-		fi
+                if [ -d $KARAF_HOME/ariane/neo4j/data ]; then
+                    rm -rf $KARAF_HOME/ariane/neo4j/data/*
+                fi
                 rm -Rf "$KARAF_DATA"
                 shift
                 ;;
