@@ -198,22 +198,22 @@ then
 
 	CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
 
-	CORE_MAPPING_VERSION=`find $CORE_REPO_HOME -name "net.echinopsii.ariane.community.core.mapping-mno_*tpl" | sed "s/.*_//g" | sed "s/.plan.*//g"`
+	CORE_MAPPING_VERSION=`find $CORE_REPO_HOME -name "net.echinopsii.ariane.community.core.mapping_mno*tpl" | sed "s/.*_mno.//g" | sed "s/.plan.*//g"`
 
 	if [[ "x$DEPLOY" = 'xmno' ]] || [[ "x$DEPLOY" = 'xfrt'  ]]; then
-		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-${DEPLOY}_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_${DEPLOY}.$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-${DEPLOY}.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
                 cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-${DEPLOY}.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
 	else
- 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping-mno_$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
+ 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_mno.$CORE_MAPPING_VERSION.plan.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.mapping_$CORE_MAPPING_VERSION.plan.tpl
 		cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService-mno.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.MappingRimManagedService.properties.tpl
                 cp $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService-mno.properties.tpl $CORE_REPO_HOME/net.echinopsii.ariane.community.core.InjectorMessagingManagedService.properties.tpl
 	fi
 
 	for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
 	do
-	    infile_frt=`echo $infile | sed "s/-frt//g"`
-	    infile_dev=`echo $infile | sed ""s/-dev//g`
+	    infile_frt=`echo $infile | sed "s/_frt.//g"`
+	    infile_dev=`echo $infile | sed ""s/_mno.//g`
 	    if [[ "$infile" = "$infile_frt" ]] && [[ "$infile" = "$infile_dev" ]]; then
 	            outfile=`echo $infile | sed "s/.tpl//g"`
         	    sed "s#%%USERHOME#$HOME#g" $infile > $outfile
