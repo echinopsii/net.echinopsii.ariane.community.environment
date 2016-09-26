@@ -61,7 +61,7 @@ list_xhtml_files=`find $KERNEL_HOME -name "*xhtml" | grep "net.echinopsii"`
 
 for target_file_path in $list_xhtml_files
 do
-	module=`echo $target_file_path | sed "s#$KERNEL_HOME/work/deployer/s/global/[0-9][0-9][0-9]/[0-9]/net.echinopsii.##g" | sed "s#.[0-9a-zA-Z]*-[0-9]*.[0-9]*.[0-9]*-SNAPSHOT.[0-9a-zA-Z/-]*.xhtml##g"`
+	module=`echo $target_file_path | sed "s#$KERNEL_HOME/work/deployer/s/global/[0-9][0-9][0-9]/[0-9]/net.echinopsii.##g" | sed "s#.[0-9a-zA-Z]*-[0-9]*.[0-9]*.[0-9]*-SNAPSHOT.[0-9a-zA-Z/-]*.xhtml##g" | sed "s#.[0-9a-zA-Z]*-[0-9]*.[0-9]*.[0-9]*-[0-9a-zA-Z/-]*-SNAPSHOT.[0-9a-zA-Z/-]*.xhtml##g"`
 	xhtml_file_name=`echo $target_file_path | sed "s#$KERNEL_HOME/[0-9a-zA-Z/.-]*META-INF##g" | sed "s#[0-9a-zA-Z/]*/##g"`
 	source_file_path=`find $ARIANE_HOME/$module -name "$xhtml_file_name" | grep "src"`
 	cp $source_file_path $target_file_path
