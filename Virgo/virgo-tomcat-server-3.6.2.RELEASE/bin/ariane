@@ -14,7 +14,7 @@ case "$1" in
         nohup $DIRNAME/startup.sh $start_args >> /var/log/ariane/ariane_$DEPLOY.log 2>&1 & 
         ;;
     stop)
-        nohup $DIRNAME/shutdown.sh stop >> /var/log/ariane/ariane_$DEPLOY.log 2>&1 & 
+        nohup $DIRNAME/shutdown.sh >> /var/log/ariane/ariane_$DEPLOY.log 2>&1 & 
         ;;
     *)
         echo "Usage: $0 {start|stop}"
