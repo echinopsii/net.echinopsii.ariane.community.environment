@@ -12,7 +12,7 @@
 
     <feature name="ariane.community.messaging-providers" description="Provide Ariane Messaging Provider Dependencies" version="0.2.2-SNAPSHOT">
         <bundle dependency="true" start-level="51">mvn:com.rabbitmq/amqp-client/3.3.5</bundle>
-	<bundle dependency="true" start-level="51">mvn:io.nats/net.echinopsii.3rdparty.jnats/0.4.1</bundle>
+	<bundle dependency="true" start-level="51">mvn:io.nats/net.echinopsii.3rdparty.jnats/0.7.3</bundle>
     </feature>
 
     <feature name="ariane.community.messaging" description="Provide Ariane Messaging Libraries" version="0.2.2-SNAPSHOT">
