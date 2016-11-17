@@ -13,6 +13,16 @@
                 <SizeBasedTriggeringPolicy size="250 MB"/>
             </Policies>
         </RollingFile>
+        <RollingFile name="LOG_FILE" fileName="/var/log/ariane/ariane_mms.log"
+              append="true" filePattern="/var/log/ariane/$${date:yyyy-MM}/ariane_mms-%d{MM-dd-yyyy}-%i.log.gz">
+           <PatternLayout>
+             <Pattern>%d{ABSOLUTE} | %-5.5p | %-16.16t | %-32.32c{1} | %X{bundle.id} - %X{bundle.name} - %X{bundle.version} | %m%n</Pattern>
+           </PatternLayout>
+           <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingFile>
         <PaxOsgi name="PAXOSGI" filter="VmLogAppender"/>
     </Appenders>
     <Loggers>
