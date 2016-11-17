@@ -3,6 +3,7 @@
 
 
     <feature name="ariane.community.messaging-json" description="Provide Ariane Messaging JSON Dependencies" version="0.2.2-SNAPSHOT">
+	<bundle dependency="true" start-level="50">mvn:com.google.code.gson/gson/2.7</bundle>
 	<bundle dependency="true" start-level="50">mvn:org.json/net.echinopsii.3rdparty.org.json.json/1.0.0</bundle>
         <bundle dependency="true" start-level="50">mvn:com.fasterxml.jackson.core/jackson-annotations/2.1.2</bundle>
         <bundle dependency="true" start-level="50">mvn:com.fasterxml.jackson.core/jackson-core/2.1.2</bundle>
