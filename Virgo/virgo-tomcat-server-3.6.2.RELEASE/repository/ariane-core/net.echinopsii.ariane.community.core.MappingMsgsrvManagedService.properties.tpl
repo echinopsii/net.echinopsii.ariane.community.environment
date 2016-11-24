@@ -1,5 +1,7 @@
 # NATS MESSAGING PROVIDER CONFIGURATION
 mom_cli.impl=net.echinopsii.ariane.community.messaging.nats.Client
+mom_cli.msg_debug_on_timeout=true
+mom_cli.nb_routees_per_service=10
 mom_host.fqdn=localhost
 mom_host.port=4222
 mom_host.user=ariane
