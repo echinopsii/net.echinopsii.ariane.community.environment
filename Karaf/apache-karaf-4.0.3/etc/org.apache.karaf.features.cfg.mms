@@ -42,7 +42,7 @@ featuresRepositories = \
     mvn:org.apache.karaf.features/spring/4.0.3/xml/features, \
     mvn:org.apache.karaf.features/standard/4.0.3/xml/features, \
     http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.ipojo.features/1.12.1/org.apache.felix.ipojo.features-1.12.1.xml, \
-    file:${karaf.home}system/com/typesafe/akka/2.3.14/net.echinopsii.3rdparty.akka-features-2.3.14.xml, \
+    file:${karaf.home}system/com/typesafe/akka/2.3.15/net.echinopsii.3rdparty.akka-features-2.3.15.xml, \
     file:${karaf.home}system/org/infinispan/6.0.2/net.echinopsii.3rdparty.infinispan-features-6.0.2.xml, \
     file:${karaf.home}system/org/neo4j/net.echinopsii.3rdparty.neo4j.community/2.3.1/net.echinopsii.3rdparty.neo4j.community-features-2.3.1.xml, \
     file:${karaf.home}system/com/tinkerpop/2.6.231/net.echinopsii.3rdparty.tinkerpop-features-2.6.231.xml, \
