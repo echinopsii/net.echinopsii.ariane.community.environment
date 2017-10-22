@@ -53,7 +53,7 @@ then
 	SUSPEND=n
 	if [ -z "$JMX_PORT" ]
 	then
-		JMX_PORT=9875
+		JMX_PORT=6975
 	fi
 	
 	if [ -z "$KEYSTORE_PASSWORD" ]
@@ -178,7 +178,20 @@ then
 		mkdir -p "$TMP_DIR"
 
         JAVA_OPTS="-Xmx1024m \
-                    -XX:MaxPermSize=512m $JAVA_OPTS"
+                   -Xms1024m \
+                   -XX:MaxPermSize=512m $JAVA_OPTS"
+
+        CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
+
+        for infile in `find $CORE_REPO_HOME -name "*plan.tpl"`
+        do
+            infile_frt=`echo $infile | sed "s/_frt.//g"`
+            infile_dev=`echo $infile | sed ""s/_mno.//g`
+            if [[ "$infile" = "$infile_frt" ]] && [[ "$infile" = "$infile_dev" ]]; then
+                    outfile=`echo $infile | sed "s/.tpl//g"`
+                    sed "s#%%USERHOME#$HOME#g" $infile > $outfile
+            fi
+        done
 
 		cd "$KERNEL_HOME"; exec $JAVA_EXECUTABLE \
 			$JAVA_OPTS \
