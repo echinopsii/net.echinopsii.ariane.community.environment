@@ -54,4 +54,5 @@ Karaf/apache-karaf-4.0.3/bin/setenv
 Karaf/apache-karaf-4.0.3/etc/log4j2.xml
 Karaf/apache-karaf-4.0.3/etc/org.apache.karaf.features.cfg
 Karaf/apache-karaf-4.0.3/etc/org.apache.karaf.features.repos.cfg
-
+.DS_Store
+*/**/.DS_Store
