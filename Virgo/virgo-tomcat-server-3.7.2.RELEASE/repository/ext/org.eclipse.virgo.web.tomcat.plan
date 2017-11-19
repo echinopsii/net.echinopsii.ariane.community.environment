@@ -6,12 +6,26 @@
 				        http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
 
         <artifact type="configuration" name="org.eclipse.virgo.web"/>
-        <artifact type="bundle" name="net.echinopsii.3rdparty.org.javassist.javassist" version="[3.15,4)"/>
+        <artifact type="bundle" name="javax.annotation" version="[1.2,2)"/>
+        <artifact type="bundle" name="javax.el" version="[3.0.0,3.1)"/>
+        <artifact type="bundle" name="javax.servlet" version="[3.0,4)"/>
+        <artifact type="bundle" name="javax.servlet.jsp" version="[2.2,3)"/>
+        <artifact type="bundle" name="com.sun.mail.javax.mail" version="[1.5,2)"/>
+        <artifact type="bundle" name="javax.xml.rpc" version="[1.1,2)"/>
+        <artifact type="bundle" name="javax.ejb" version="[3.1,4)"/>
+        <artifact type="bundle" name="javax.persistence" version="[2.0,3)"/>
+        <artifact type="bundle" name="org.eclipse.jdt.core.compiler.batch" version="[3.8,4)"/>
+        <artifact type="bundle" name="org.springframework.web" version="[4.3,5)"/>
+        <artifact type="bundle" name="org.apache.el" version="[8.5,8.6)"/>
+        <artifact type="bundle" name="org.apache.tomcat.api" version="[8.5,8.6)"/>
+        <artifact type="bundle" name="org.apache.catalina" version="[8.5,8.6)"/>
+        <artifact type="bundle" name="org.apache.catalina.tribes" version="[8.5,8.6)"/>
         <artifact type="bundle" name="org.eclipse.virgo.web.spring.integration" version="[3.0, 4)"/>
         <artifact type="bundle" name="org.eclipse.gemini.web.core" version="[3.0, 4.0)"/>
         <artifact type="bundle" name="org.eclipse.gemini.web.tomcat" version="[3.0, 4.0)"/>
         <artifact type="bundle" name="org.eclipse.virgo.web.core" version="[3.0, 4.0)"/>
         <artifact type="bundle" name="org.eclipse.virgo.web.dm" version="[3.0, 4.0)"/>
         <artifact type="bundle" name="org.eclipse.virgo.web.tomcat.support" version="[3.0, 4.0)"/>
+        <artifact type="bundle" name="net.echinopsii.3rdparty.org.javassist.javassist" version="[3.15, 4)"/>
         <artifact type="bundle" name="org.eclipse.virgo.web.servlet.adapter" version="[3.0, 4.0)"/>
 </plan>
