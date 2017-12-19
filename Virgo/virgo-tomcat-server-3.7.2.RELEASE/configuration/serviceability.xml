@@ -73,6 +73,26 @@
 		<appender-ref ref="LOG_FILE" />
 	</logger>
 
+        <logger level="WARN" additivity="false" name="org.hibernate">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
+        <logger level="WARN" additivity="false" name="org.hibernate.SQL">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
+        <logger level="WARN" additivity="false" name="org.hibernate.type">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
+        <logger level="INFO" additivity="false" name="net.echinopsii.ariane.community.core.idm.base">
+                <appender-ref ref="SIFTED_LOG_FILE" />
+                <appender-ref ref="LOG_FILE" />
+        </logger>
+
 	<root level="INFO">
 		<appender-ref ref="SIFTED_LOG_FILE" />
 		<appender-ref ref="LOG_FILE" />
