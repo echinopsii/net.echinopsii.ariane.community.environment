@@ -1,0 +1,23 @@
+#!/bin/bash
+
+DIRNAME=`dirname "$0"`
+PROGNAME=`basename "$0"`
+
+if [ -f "$DIRNAME/setenv.sh" ]; then
+  . "$DIRNAME/setenv.sh"
+fi
+
+
+case "$1" in 
+    start)
+        start_args=`echo $* | sed -e "s#start##g"`
+        nohup $DIRNAME/startup.sh $start_args >> /var/log/ariane/ariane_$DEPLOY.log 2>&1 & 
+        ;;
+    stop)
+        nohup $DIRNAME/shutdown.sh >> /var/log/ariane/ariane_$DEPLOY.log 2>&1 & 
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac

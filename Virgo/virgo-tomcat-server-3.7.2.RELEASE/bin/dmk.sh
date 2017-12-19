@@ -169,6 +169,8 @@ then
      	JAVA_EXECUTABLE=$JAVA_HOME/bin/java
     fi
 
+    java -version
+
 	# If we get here we have the correct Java version.
 	
 	if [ -z "$NO_START_FLAG" ]
@@ -179,7 +181,7 @@ then
 
         JAVA_OPTS="-Xmx1024m \
                    -Xms1024m \
-                   -XX:MaxPermSize=512m $JAVA_OPTS"
+                   $JAVA_OPTS"
 
         CORE_REPO_HOME=$KERNEL_HOME/repository/ariane-core/
 
@@ -193,8 +195,39 @@ then
             fi
         done
 
+        for infile in `find $CORE_REPO_HOME -name "*properties.tpl"`
+        do
+            infile_frt=`echo $infile | sed "s/-frt//g"`
+            infile_dev=`echo $infile | sed ""s/-dev//g`
+            if [[ "$infile" = "$infile_frt" ]] && [[ "$infile" = "$infile_dev" ]]; then
+                outfile=`echo $infile | sed "s/.tpl//g"`
+
+                sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $infile > $outfile
+                if [ `uname` == "Darwin" ]; then
+                    sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+                    sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
+
+                    sed -i .bu "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+                    sed -i .bu "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+                    sed -i .bu "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
+
+                    sed -i .bu "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
+                    rm ${outfile}.bu
+                else
+                    sed -i "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
+                    sed -i "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
+
+                    sed -i "s#%%DIRECTORY_DB_URL#$DIRECTORY_DB_URL#g" $outfile
+                    sed -i "s#%%DIRECTORY_DB_USER#$DIRECTORY_DB_USER#g" $outfile
+                    sed -i "s#%%DIRECTORY_DB_PWD#$DIRECTORY_DB_PWD#g" $outfile
+
+                    sed -i "s#%%VIRGO_HOME#$KERNEL_HOME#g" $outfile
+                fi
+            fi
+        done
+
 		cd "$KERNEL_HOME"; exec $JAVA_EXECUTABLE \
-			$JAVA_OPTS \
+		    $JAVA_OPTS \
 			$DEBUG_OPTS \
 			$JMX_OPTS \
 			-XX:+HeapDumpOnOutOfMemoryError \
@@ -213,7 +246,7 @@ then
             -Dssh.server.keystore="$CONFIG_DIR/hostkey.ser" \
             -Dosgi.frameworkClassPath="$FWCLASSPATH" \
             -Djava.endorsed.dirs="$KERNEL_HOME/lib/endorsed" \
-            -Dcom.sun.management.jmxremote.port=$JMX_PORT \
+            -Dcom.sun.mmnagement.jmxremote.port=$JMX_PORT \
 		    -Dcom.sun.management.jmxremote.authenticate=true \
 	    	-Dcom.sun.management.jmxremote.login.config=virgo-kernel \
     		-Dcom.sun.management.jmxremote.access.file="$ACCESS_PROPERTIES" \
@@ -224,6 +257,7 @@ then
             -classpath "$CLASSPATH" \
 			org.eclipse.equinox.launcher.Main \
             -noExit \
+            -noverify \
 			$LAUNCH_OPTS \
 			$ADDITIONAL_ARGS
 	fi
