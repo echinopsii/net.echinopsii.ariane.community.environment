@@ -228,7 +228,7 @@ then
 	            outfile=`echo $infile | sed "s/.tpl//g"`
 	
         	    sed "s#%%IDM_DB_URL#$IDM_DB_URL#g" $infile > $outfile
-	            if [ `uname` == "Darwin" ]; then
+	            if [[ `uname` == "Darwin" ]]  && [[ `sed --help | grep "GNU" | wc -l` -eq 0 ]]; then
         	        sed -i .bu "s#%%IDM_DB_USER#$IDM_DB_USER#g" $outfile
                 	sed -i .bu "s#%%IDM_DB_PWD#$IDM_DB_PWD#g" $outfile
 
